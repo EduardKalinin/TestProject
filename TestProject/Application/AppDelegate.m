@@ -7,19 +7,31 @@
 //
 
 #import "AppDelegate.h"
+#import "TransportLayer.h"
 
 @interface AppDelegate ()
+
+@property (strong, nonatomic) TransportLayer *transport;
 
 @end
 
 @implementation AppDelegate
 
-
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Hi from Dev branch
+    
+    self.transport = [[TransportLayer alloc] init];
+    NSURL *url = [NSURL URLWithString:@"http://download.thinkbroadband.com/5MB.zip"];
+    [self.transport downloadFileWithURL:url completion:^(NSData *fileData, NSError *error) {
+        
+        if (error) {
+            NSLog(@"%@",error);
+        } else {
+            NSLog(@"%lu",fileData.length);
+        }
+    }];
+    
     return YES;
 }
-
 
 - (void)applicationWillResignActive:(UIApplication *)application {
     // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
