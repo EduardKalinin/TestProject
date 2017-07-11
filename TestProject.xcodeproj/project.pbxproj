@@ -14,6 +14,7 @@
 		8B566B981F15362500AB6A3A /* Photo.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B566B971F15362500AB6A3A /* Photo.m */; };
 		8B566BA21F153BF300AB6A3A /* CategoryService.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B566BA11F153BF300AB6A3A /* CategoryService.m */; };
 		8B566BA51F153C0400AB6A3A /* PhotosService.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B566BA41F153C0400AB6A3A /* PhotosService.m */; };
+		8B566BA81F155DA800AB6A3A /* CustomTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B566BA71F155DA800AB6A3A /* CustomTableViewCell.m */; };
 		8BD22CD71F137C7500DD96AE /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BD22CD61F137C7500DD96AE /* main.m */; };
 		8BD22CE01F137C7500DD96AE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8BD22CDE1F137C7500DD96AE /* Main.storyboard */; };
 		8BD22CE21F137C7500DD96AE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8BD22CE11F137C7500DD96AE /* Assets.xcassets */; };
@@ -39,6 +40,8 @@
 		8B566BA11F153BF300AB6A3A /* CategoryService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CategoryService.m; sourceTree = "<group>"; };
 		8B566BA31F153C0400AB6A3A /* PhotosService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhotosService.h; sourceTree = "<group>"; };
 		8B566BA41F153C0400AB6A3A /* PhotosService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhotosService.m; sourceTree = "<group>"; };
+		8B566BA61F155DA800AB6A3A /* CustomTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomTableViewCell.h; sourceTree = "<group>"; };
+		8B566BA71F155DA800AB6A3A /* CustomTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomTableViewCell.m; sourceTree = "<group>"; };
 		8BD22CD21F137C7500DD96AE /* TestProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TestProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8BD22CD61F137C7500DD96AE /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		8BD22CDF1F137C7500DD96AE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -157,6 +160,8 @@
 				8B566B8D1F15095D00AB6A3A /* ImageViewController.m */,
 				8B566B8F1F152F0A00AB6A3A /* CategoryViewController.h */,
 				8B566B901F152F0A00AB6A3A /* CategoryViewController.m */,
+				8B566BA61F155DA800AB6A3A /* CustomTableViewCell.h */,
+				8B566BA71F155DA800AB6A3A /* CustomTableViewCell.m */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -243,6 +248,7 @@
 			files = (
 				8B566B8E1F15095D00AB6A3A /* ImageViewController.m in Sources */,
 				8B566BA21F153BF300AB6A3A /* CategoryService.m in Sources */,
+				8B566BA81F155DA800AB6A3A /* CustomTableViewCell.m in Sources */,
 				8B566B8B1F14B55800AB6A3A /* UIAlertController+Utils.m in Sources */,
 				8BD22CF01F138C4500DD96AE /* ViewController.m in Sources */,
 				8B566BA51F153C0400AB6A3A /* PhotosService.m in Sources */,
