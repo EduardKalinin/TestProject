@@ -1,9 +1,9 @@
 //
-//  UIAlertController+Utils.m
-//  JSONPlaceholder
+//  Category.h
+//  TestProject
 //
-//  Created by Eduard Kalinin on 04.05.17.
-//  Copyright (c) 2017 Eduard Kalinin. All rights reserved.
+//  Created by Developer on 7/11/17.
+//  Copyright © 2017 Developer. All rights reserved.
 //
 
 #import "UIAlertController+Utils.h"

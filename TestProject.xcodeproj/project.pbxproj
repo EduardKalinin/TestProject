@@ -9,6 +9,11 @@
 /* Begin PBXBuildFile section */
 		8B566B8B1F14B55800AB6A3A /* UIAlertController+Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B566B8A1F14B55800AB6A3A /* UIAlertController+Utils.m */; };
 		8B566B8E1F15095D00AB6A3A /* ImageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B566B8D1F15095D00AB6A3A /* ImageViewController.m */; };
+		8B566B911F152F0A00AB6A3A /* CategoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B566B901F152F0A00AB6A3A /* CategoryViewController.m */; };
+		8B566B951F15354B00AB6A3A /* Category.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B566B941F15354B00AB6A3A /* Category.m */; };
+		8B566B981F15362500AB6A3A /* Photo.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B566B971F15362500AB6A3A /* Photo.m */; };
+		8B566BA21F153BF300AB6A3A /* CategoryService.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B566BA11F153BF300AB6A3A /* CategoryService.m */; };
+		8B566BA51F153C0400AB6A3A /* PhotosService.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B566BA41F153C0400AB6A3A /* PhotosService.m */; };
 		8BD22CD71F137C7500DD96AE /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BD22CD61F137C7500DD96AE /* main.m */; };
 		8BD22CE01F137C7500DD96AE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8BD22CDE1F137C7500DD96AE /* Main.storyboard */; };
 		8BD22CE21F137C7500DD96AE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8BD22CE11F137C7500DD96AE /* Assets.xcassets */; };
@@ -23,6 +28,17 @@
 		8B566B8A1F14B55800AB6A3A /* UIAlertController+Utils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIAlertController+Utils.m"; sourceTree = "<group>"; };
 		8B566B8C1F15095D00AB6A3A /* ImageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageViewController.h; sourceTree = "<group>"; };
 		8B566B8D1F15095D00AB6A3A /* ImageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageViewController.m; sourceTree = "<group>"; };
+		8B566B8F1F152F0A00AB6A3A /* CategoryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CategoryViewController.h; sourceTree = "<group>"; };
+		8B566B901F152F0A00AB6A3A /* CategoryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CategoryViewController.m; sourceTree = "<group>"; };
+		8B566B931F15354B00AB6A3A /* Category.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Category.h; sourceTree = "<group>"; };
+		8B566B941F15354B00AB6A3A /* Category.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Category.m; sourceTree = "<group>"; };
+		8B566B961F15362500AB6A3A /* Photo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Photo.h; sourceTree = "<group>"; };
+		8B566B971F15362500AB6A3A /* Photo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Photo.m; sourceTree = "<group>"; };
+		8B566B9E1F15380D00AB6A3A /* ModelProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ModelProtocol.h; sourceTree = "<group>"; };
+		8B566BA01F153BF300AB6A3A /* CategoryService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CategoryService.h; sourceTree = "<group>"; };
+		8B566BA11F153BF300AB6A3A /* CategoryService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CategoryService.m; sourceTree = "<group>"; };
+		8B566BA31F153C0400AB6A3A /* PhotosService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhotosService.h; sourceTree = "<group>"; };
+		8B566BA41F153C0400AB6A3A /* PhotosService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhotosService.m; sourceTree = "<group>"; };
 		8BD22CD21F137C7500DD96AE /* TestProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TestProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8BD22CD61F137C7500DD96AE /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		8BD22CDF1F137C7500DD96AE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -57,6 +73,30 @@
 			path = Support;
 			sourceTree = "<group>";
 		};
+		8B566B921F15330D00AB6A3A /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				8B566B9E1F15380D00AB6A3A /* ModelProtocol.h */,
+				8B566B931F15354B00AB6A3A /* Category.h */,
+				8B566B941F15354B00AB6A3A /* Category.m */,
+				8B566B961F15362500AB6A3A /* Photo.h */,
+				8B566B971F15362500AB6A3A /* Photo.m */,
+			);
+			name = Models;
+			path = TestProject/Models;
+			sourceTree = SOURCE_ROOT;
+		};
+		8B566B9F1F153BAF00AB6A3A /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				8B566BA01F153BF300AB6A3A /* CategoryService.h */,
+				8B566BA11F153BF300AB6A3A /* CategoryService.m */,
+				8B566BA31F153C0400AB6A3A /* PhotosService.h */,
+				8B566BA41F153C0400AB6A3A /* PhotosService.m */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
 		8BD22CC91F137C7400DD96AE = {
 			isa = PBXGroup;
 			children = (
@@ -76,6 +116,8 @@
 		8BD22CD41F137C7500DD96AE /* TestProject */ = {
 			isa = PBXGroup;
 			children = (
+				8B566B9F1F153BAF00AB6A3A /* Service */,
+				8B566B921F15330D00AB6A3A /* Models */,
 				8B566B881F14B55800AB6A3A /* Support */,
 				8BD22CF11F138C4F00DD96AE /* Application */,
 				8BD22CED1F138C4500DD96AE /* Views */,
@@ -113,6 +155,8 @@
 				8BD22CEF1F138C4500DD96AE /* ViewController.m */,
 				8B566B8C1F15095D00AB6A3A /* ImageViewController.h */,
 				8B566B8D1F15095D00AB6A3A /* ImageViewController.m */,
+				8B566B8F1F152F0A00AB6A3A /* CategoryViewController.h */,
+				8B566B901F152F0A00AB6A3A /* CategoryViewController.m */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -198,9 +242,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				8B566B8E1F15095D00AB6A3A /* ImageViewController.m in Sources */,
+				8B566BA21F153BF300AB6A3A /* CategoryService.m in Sources */,
 				8B566B8B1F14B55800AB6A3A /* UIAlertController+Utils.m in Sources */,
 				8BD22CF01F138C4500DD96AE /* ViewController.m in Sources */,
+				8B566BA51F153C0400AB6A3A /* PhotosService.m in Sources */,
+				8B566B981F15362500AB6A3A /* Photo.m in Sources */,
+				8B566B951F15354B00AB6A3A /* Category.m in Sources */,
 				8BD22CF71F138C7600DD96AE /* TransportLayer.m in Sources */,
+				8B566B911F152F0A00AB6A3A /* CategoryViewController.m in Sources */,
 				8BD22CD71F137C7500DD96AE /* main.m in Sources */,
 				8BD22CF41F138C4F00DD96AE /* AppDelegate.m in Sources */,
 			);

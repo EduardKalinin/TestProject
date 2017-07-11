@@ -45,19 +45,29 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NT3-BP-RWA">
-                                <rect key="frame" x="120" y="364" width="134" height="30"/>
+                                <rect key="frame" x="120" y="324" width="134" height="30"/>
                                 <state key="normal" title="Go in hell. Mvahaha"/>
                                 <connections>
                                     <segue destination="bhZ-dF-rNR" kind="show" id="gZW-WJ-oKV"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wZT-DH-4mh">
+                                <rect key="frame" x="159" y="434" width="57" height="30"/>
+                                <state key="normal" title="Pictures"/>
+                                <connections>
+                                    <segue destination="nXI-KY-MPC" kind="show" id="GyW-sC-CDd"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="wZT-DH-4mh" firstAttribute="leading" secondItem="4PX-yH-gn6" secondAttribute="leading" constant="159" id="12h-o4-nny"/>
+                            <constraint firstItem="wZT-DH-4mh" firstAttribute="top" secondItem="NT3-BP-RWA" secondAttribute="bottom" constant="80" id="2Dk-qH-FDd"/>
                             <constraint firstItem="NT3-BP-RWA" firstAttribute="leading" secondItem="4PX-yH-gn6" secondAttribute="leading" constant="120" id="3F0-5u-emf"/>
                             <constraint firstItem="4CC-ge-c7g" firstAttribute="leading" secondItem="4PX-yH-gn6" secondAttribute="leading" constant="133" id="ERl-R5-CCj"/>
                             <constraint firstAttribute="trailing" secondItem="4CC-ge-c7g" secondAttribute="trailing" constant="134" id="FaG-32-87J"/>
-                            <constraint firstItem="NT3-BP-RWA" firstAttribute="top" secondItem="4CC-ge-c7g" secondAttribute="bottom" constant="120" id="MBo-TL-wgW"/>
+                            <constraint firstAttribute="trailing" secondItem="wZT-DH-4mh" secondAttribute="trailing" constant="159" id="I25-xO-zP0"/>
+                            <constraint firstItem="NT3-BP-RWA" firstAttribute="top" secondItem="4CC-ge-c7g" secondAttribute="bottom" constant="80" id="MBo-TL-wgW"/>
                             <constraint firstItem="4CC-ge-c7g" firstAttribute="top" secondItem="QyD-Kt-cVk" secondAttribute="bottom" constant="150" id="ex8-5i-ndi"/>
                             <constraint firstAttribute="trailing" secondItem="NT3-BP-RWA" secondAttribute="trailing" constant="121" id="qGW-gc-36x"/>
                         </constraints>
@@ -66,7 +76,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="q2r-i0-Dst" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-372" y="72"/>
+            <point key="canvasLocation" x="-372" y="71.514242878560722"/>
         </scene>
         <!--Image View Controller-->
         <scene sceneID="lP0-K7-hcs">
@@ -101,7 +111,44 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uUi-oe-gq1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="412" y="521"/>
+            <point key="canvasLocation" x="412" y="662"/>
+        </scene>
+        <!--Category View Controller-->
+        <scene sceneID="hcr-Z4-ild">
+            <objects>
+                <viewController storyboardIdentifier="CategoryViewController" id="nXI-KY-MPC" customClass="CategoryViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="AB0-ga-3oJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="kuY-QK-LC1"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="lXu-jU-V3h">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="391-bx-vqB">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="nXI-KY-MPC" id="7hV-XI-WTn"/>
+                                    <outlet property="delegate" destination="nXI-KY-MPC" id="Ueo-Ss-bPJ"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="kuY-QK-LC1" firstAttribute="top" secondItem="391-bx-vqB" secondAttribute="bottom" id="78f-Ak-n3O"/>
+                            <constraint firstAttribute="trailing" secondItem="391-bx-vqB" secondAttribute="trailing" id="fNM-h4-Iwt"/>
+                            <constraint firstItem="391-bx-vqB" firstAttribute="leading" secondItem="lXu-jU-V3h" secondAttribute="leading" id="fqT-7Y-uqm"/>
+                            <constraint firstItem="391-bx-vqB" firstAttribute="top" secondItem="AB0-ga-3oJ" secondAttribute="bottom" id="vyD-4G-6BT"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="tableView" destination="391-bx-vqB" id="qg6-Ts-lIs"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="YPv-Mh-oKW" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1225" y="72"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
@@ -116,77 +163,77 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="O2A-EV-ayL">
-                                <rect key="frame" x="136" y="80" width="103" height="30"/>
+                                <rect key="frame" x="136" y="124" width="103" height="30"/>
                                 <state key="normal" title="Download 5mb"/>
                                 <connections>
                                     <action selector="actionFirstButtonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="gMY-UO-rfx"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="p5B-A1-cZ2">
-                                <rect key="frame" x="78" y="580" width="31" height="30"/>
+                                <rect key="frame" x="78" y="624" width="31" height="30"/>
                                 <state key="normal" title="5mb"/>
                                 <connections>
                                     <action selector="actionFiveMbButtonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Mfd-uD-SPi"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qry-BZ-phe">
-                                <rect key="frame" x="119" y="580" width="38" height="30"/>
+                                <rect key="frame" x="119" y="624" width="38" height="30"/>
                                 <state key="normal" title="10mb"/>
                                 <connections>
                                     <action selector="actionTenMbButtonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="06u-R5-BEn"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UkC-eP-gBE">
-                                <rect key="frame" x="167" y="580" width="40" height="30"/>
+                                <rect key="frame" x="167" y="624" width="40" height="30"/>
                                 <state key="normal" title="20mb"/>
                                 <connections>
                                     <action selector="actionTwentyMbButtonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="YZ8-pP-b0u"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="33Q-A4-k6j">
-                                <rect key="frame" x="217" y="580" width="41" height="30"/>
+                                <rect key="frame" x="217" y="624" width="41" height="30"/>
                                 <state key="normal" title="50mb"/>
                                 <connections>
                                     <action selector="actionFiftyMbButtonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="m4L-Ie-z5e"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Q2O-at-cgg">
-                                <rect key="frame" x="268" y="580" width="47" height="30"/>
+                                <rect key="frame" x="268" y="624" width="47" height="30"/>
                                 <state key="normal" title="100mb"/>
                                 <connections>
                                     <action selector="actionHundredMbButtonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="nXM-Jl-EAx"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IY7-9V-1IF">
-                                <rect key="frame" x="132" y="170" width="110" height="30"/>
+                                <rect key="frame" x="132" y="214" width="110" height="30"/>
                                 <state key="normal" title="Download 10mb"/>
                                 <connections>
                                     <action selector="actionSecondButtonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="rIQ-md-dSl"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GQs-d6-DMp">
-                                <rect key="frame" x="131" y="260" width="112" height="30"/>
+                                <rect key="frame" x="131" y="304" width="112" height="30"/>
                                 <state key="normal" title="Download 20mb"/>
                                 <connections>
                                     <action selector="actionThirdButtonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="soj-va-mxm"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aio-oi-I9Q">
-                                <rect key="frame" x="131" y="350" width="113" height="30"/>
+                                <rect key="frame" x="131" y="394" width="113" height="30"/>
                                 <state key="normal" title="Download 50mb"/>
                                 <connections>
                                     <action selector="actionFourthButtonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="HWd-sX-Jhu"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lj8-AZ-lbL">
-                                <rect key="frame" x="127" y="440" width="120" height="30"/>
+                                <rect key="frame" x="127" y="484" width="120" height="30"/>
                                 <state key="normal" title="Download 100mb"/>
                                 <connections>
                                     <action selector="actionFifthButtonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="aY7-zb-n3v"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HQG-J4-aV1">
-                                <rect key="frame" x="126" y="530" width="122" height="30"/>
+                                <rect key="frame" x="126" y="574" width="122" height="30"/>
                                 <state key="normal" title="Download 200mb"/>
                                 <connections>
                                     <action selector="actionSixthButtonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="W7I-zc-7wa"/>
