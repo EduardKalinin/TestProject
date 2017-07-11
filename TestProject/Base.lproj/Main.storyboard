@@ -55,6 +55,13 @@
                                     <action selector="actionFiftyMbButtonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="m4L-Ie-z5e"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Q2O-at-cgg">
+                                <rect key="frame" x="268" y="580" width="47" height="30"/>
+                                <state key="normal" title="100mb"/>
+                                <connections>
+                                    <action selector="actionHundredMbButtonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="nXM-Jl-EAx"/>
+                                </connections>
+                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IY7-9V-1IF">
                                 <rect key="frame" x="132" y="170" width="110" height="30"/>
                                 <state key="normal" title="Download 10mb"/>
@@ -90,17 +97,15 @@
                                     <action selector="actionSixthButtonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="W7I-zc-7wa"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Q2O-at-cgg">
-                                <rect key="frame" x="268" y="580" width="47" height="30"/>
-                                <state key="normal" title="100mb"/>
-                                <connections>
-                                    <action selector="actionHundredMbButtonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="nXM-Jl-EAx"/>
-                                </connections>
-                            </button>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="Mdl-66-qSY">
+                                <rect key="frame" x="177" y="323.5" width="20" height="20"/>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="IY7-9V-1IF" firstAttribute="centerX" secondItem="O2A-EV-ayL" secondAttribute="centerX" id="0cp-39-RXj"/>
+                            <constraint firstItem="Mdl-66-qSY" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="1fH-Gt-Wfe"/>
+                            <constraint firstItem="Mdl-66-qSY" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="7Po-ST-xfY"/>
                             <constraint firstItem="Qry-BZ-phe" firstAttribute="centerY" secondItem="p5B-A1-cZ2" secondAttribute="centerY" id="9cS-zX-Px7"/>
                             <constraint firstItem="UkC-eP-gBE" firstAttribute="leading" secondItem="Qry-BZ-phe" secondAttribute="trailing" constant="10" id="Aso-FB-Pc3"/>
                             <constraint firstItem="UkC-eP-gBE" firstAttribute="centerX" secondItem="Lj8-AZ-lbL" secondAttribute="centerX" id="MDA-jr-4sW"/>
@@ -127,6 +132,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="activityIndicator" destination="Mdl-66-qSY" id="zed-W7-ZL8"/>
                         <outlet property="fifthButton" destination="Lj8-AZ-lbL" id="qeC-tM-QrF"/>
                         <outlet property="fiftyMbButton" destination="33Q-A4-k6j" id="SxX-4n-hfm"/>
                         <outlet property="firstButton" destination="O2A-EV-ayL" id="o2D-C8-fjN"/>

@@ -32,6 +32,7 @@ NSString *const twoHundredMb = @"http://download.thinkbroadband.com/200MB.zip";
 @property (weak, nonatomic) IBOutlet UIButton *twentyMbButton;
 @property (weak, nonatomic) IBOutlet UIButton *fiftyMbButton;
 @property (weak, nonatomic) IBOutlet UIButton *hundredMbButton;
+@property (weak, nonatomic) IBOutlet UIActivityIndicatorView *activityIndicator;
 
 
 @end
@@ -47,8 +48,10 @@ NSString *const twoHundredMb = @"http://download.thinkbroadband.com/200MB.zip";
 
 - (void)loadFileWithURLString:(NSString *)urlString {
     __weak ViewController *weakself = self;
+    [weakself.activityIndicator startAnimating];
     NSURL *url = [NSURL URLWithString:urlString];
     [self.transport downloadFileWithURL:url completion:^(NSData *fileData, NSError *error) {
+        [weakself.activityIndicator stopAnimating];
         __strong ViewController *strongSelf = weakself;
         if (strongSelf) {
             if (error) {
@@ -66,47 +69,48 @@ NSString *const twoHundredMb = @"http://download.thinkbroadband.com/200MB.zip";
 
 #pragma mark - Actions
 
-- (IBAction)actionFirstButtonClicked:(id)sender {
+- (IBAction)actionFirstButtonClicked:(UIButton *)sender {
     [self loadFileWithURLString:fiveMb];
+    
 }
 
-- (IBAction)actionSecondButtonClicked:(id)sender {
+- (IBAction)actionSecondButtonClicked:(UIButton *)sender {
     [self loadFileWithURLString:tenMb];
 }
 
-- (IBAction)actionThirdButtonClicked:(id)sender {
+- (IBAction)actionThirdButtonClicked:(UIButton *)sender {
     [self loadFileWithURLString:twentyMb];
 }
 
-- (IBAction)actionFourthButtonClicked:(id)sender {
+- (IBAction)actionFourthButtonClicked:(UIButton *)sender {
     [self loadFileWithURLString:fiftyMb];
 }
 
-- (IBAction)actionFifthButtonClicked:(id)sender {
+- (IBAction)actionFifthButtonClicked:(UIButton *)sender {
     [self loadFileWithURLString:hundredMb];
 }
 
-- (IBAction)actionSixthButtonClicked:(id)sender {
+- (IBAction)actionSixthButtonClicked:(UIButton *)sender {
     [self loadFileWithURLString:twoHundredMb];
 }
 
-- (IBAction)actionFiveMbButtonClicked:(id)sender {
+- (IBAction)actionFiveMbButtonClicked:(UIButton *)sender {
     [self loadFileWithURLString:fiveMb];
 }
 
-- (IBAction)actionTenMbButtonClicked:(id)sender {
+- (IBAction)actionTenMbButtonClicked:(UIButton *)sender {
     [self loadFileWithURLString:tenMb];
 }
 
-- (IBAction)actionTwentyMbButtonClicked:(id)sender {
+- (IBAction)actionTwentyMbButtonClicked:(UIButton *)sender {
     [self loadFileWithURLString:twentyMb];
 }
 
-- (IBAction)actionFiftyMbButtonClicked:(id)sender {
+- (IBAction)actionFiftyMbButtonClicked:(UIButton *)sender {
     [self loadFileWithURLString:fiftyMb];
 }
 
-- (IBAction)actionHundredMbButtonClicked:(id)sender {
+- (IBAction)actionHundredMbButtonClicked:(UIButton *)sender {
     [self loadFileWithURLString:hundredMb];
 }
 
