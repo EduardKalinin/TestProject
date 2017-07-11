@@ -7,6 +7,7 @@
 //
 
 #import "Category.h"
+#import "Photo.h"
 
 @implementation Category
 
@@ -16,7 +17,12 @@
         self.identifier = [dict[@"catID"] integerValue];
         self.name = [dict[@"catName"] capitalizedString];
         self.url = [NSURL URLWithString:dict[@"carURL"]];
-        self.photos = [dict[@"photos"] array];
+        NSMutableArray *photos = [NSMutableArray array];
+        for (NSDictionary *photoDict in dict[@"photos"]) {
+            Photo *photo = [[Photo alloc] initWithJSON:photoDict];
+            [photos addObject:photo];
+        }
+        self.photos = photos;
     }
     return self;}
 
