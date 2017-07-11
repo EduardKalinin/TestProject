@@ -27,6 +27,41 @@
                                     <action selector="actionFirstButtonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="gMY-UO-rfx"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="p5B-A1-cZ2">
+                                <rect key="frame" x="78" y="580" width="31" height="30"/>
+                                <state key="normal" title="5mb"/>
+                                <connections>
+                                    <action selector="actionFiveMbButtonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Mfd-uD-SPi"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qry-BZ-phe">
+                                <rect key="frame" x="119" y="580" width="38" height="30"/>
+                                <state key="normal" title="10mb"/>
+                                <connections>
+                                    <action selector="actionTenMbButtonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="06u-R5-BEn"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UkC-eP-gBE">
+                                <rect key="frame" x="167" y="580" width="40" height="30"/>
+                                <state key="normal" title="20mb"/>
+                                <connections>
+                                    <action selector="actionTwentyMbButtonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="YZ8-pP-b0u"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="33Q-A4-k6j">
+                                <rect key="frame" x="217" y="580" width="41" height="30"/>
+                                <state key="normal" title="50mb"/>
+                                <connections>
+                                    <action selector="actionFiftyMbButtonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="m4L-Ie-z5e"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IY7-9V-1IF">
+                                <rect key="frame" x="132" y="170" width="110" height="30"/>
+                                <state key="normal" title="Download 10mb"/>
+                                <connections>
+                                    <action selector="actionSecondButtonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="rIQ-md-dSl"/>
+                                </connections>
+                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GQs-d6-DMp">
                                 <rect key="frame" x="131" y="260" width="112" height="30"/>
                                 <state key="normal" title="Download 20mb"/>
@@ -55,38 +90,54 @@
                                     <action selector="actionSixthButtonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="W7I-zc-7wa"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IY7-9V-1IF">
-                                <rect key="frame" x="132" y="170" width="110" height="30"/>
-                                <state key="normal" title="Download 10mb"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Q2O-at-cgg">
+                                <rect key="frame" x="268" y="580" width="47" height="30"/>
+                                <state key="normal" title="100mb"/>
                                 <connections>
-                                    <action selector="actionSecondButtonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="rIQ-md-dSl"/>
+                                    <action selector="actionHundredMbButtonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="nXM-Jl-EAx"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="IY7-9V-1IF" firstAttribute="centerX" secondItem="O2A-EV-ayL" secondAttribute="centerX" id="0cp-39-RXj"/>
+                            <constraint firstItem="Qry-BZ-phe" firstAttribute="centerY" secondItem="p5B-A1-cZ2" secondAttribute="centerY" id="9cS-zX-Px7"/>
+                            <constraint firstItem="UkC-eP-gBE" firstAttribute="leading" secondItem="Qry-BZ-phe" secondAttribute="trailing" constant="10" id="Aso-FB-Pc3"/>
+                            <constraint firstItem="UkC-eP-gBE" firstAttribute="centerX" secondItem="Lj8-AZ-lbL" secondAttribute="centerX" id="MDA-jr-4sW"/>
                             <constraint firstAttribute="trailing" secondItem="O2A-EV-ayL" secondAttribute="trailing" constant="136" id="NGb-0G-YED"/>
                             <constraint firstItem="O2A-EV-ayL" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="136" id="ON3-ry-K4M"/>
+                            <constraint firstItem="UkC-eP-gBE" firstAttribute="top" secondItem="HQG-J4-aV1" secondAttribute="bottom" constant="20" id="PX8-mF-dwP"/>
+                            <constraint firstItem="HQG-J4-aV1" firstAttribute="centerX" secondItem="Lj8-AZ-lbL" secondAttribute="centerX" id="Qyq-Sb-IH1"/>
                             <constraint firstItem="Lj8-AZ-lbL" firstAttribute="top" secondItem="aio-oi-I9Q" secondAttribute="bottom" constant="60" id="RXK-GK-I6Z"/>
                             <constraint firstItem="Lj8-AZ-lbL" firstAttribute="centerX" secondItem="O2A-EV-ayL" secondAttribute="centerX" id="Sfo-sy-4yU"/>
                             <constraint firstItem="IY7-9V-1IF" firstAttribute="top" secondItem="O2A-EV-ayL" secondAttribute="bottom" constant="60" id="ZS7-fc-kmc"/>
                             <constraint firstItem="HQG-J4-aV1" firstAttribute="centerX" secondItem="O2A-EV-ayL" secondAttribute="centerX" id="efb-aj-SvN"/>
                             <constraint firstItem="GQs-d6-DMp" firstAttribute="top" secondItem="IY7-9V-1IF" secondAttribute="bottom" constant="60" id="hHR-yt-xLr"/>
+                            <constraint firstItem="Qry-BZ-phe" firstAttribute="leading" secondItem="p5B-A1-cZ2" secondAttribute="trailing" constant="10" id="hph-bS-Nj6"/>
                             <constraint firstItem="O2A-EV-ayL" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="60" id="kMR-zC-w7X"/>
+                            <constraint firstItem="33Q-A4-k6j" firstAttribute="centerY" secondItem="p5B-A1-cZ2" secondAttribute="centerY" id="mLN-Ib-YbA"/>
                             <constraint firstItem="HQG-J4-aV1" firstAttribute="top" secondItem="Lj8-AZ-lbL" secondAttribute="bottom" constant="60" id="nJR-nj-2Zc"/>
                             <constraint firstItem="GQs-d6-DMp" firstAttribute="centerX" secondItem="O2A-EV-ayL" secondAttribute="centerX" id="p96-cM-T3V"/>
+                            <constraint firstItem="Q2O-at-cgg" firstAttribute="leading" secondItem="33Q-A4-k6j" secondAttribute="trailing" constant="10" id="pEM-TR-Pan"/>
                             <constraint firstItem="aio-oi-I9Q" firstAttribute="top" secondItem="GQs-d6-DMp" secondAttribute="bottom" constant="60" id="pzR-Dw-iem"/>
+                            <constraint firstItem="Q2O-at-cgg" firstAttribute="centerY" secondItem="p5B-A1-cZ2" secondAttribute="centerY" id="txN-Ly-tIr"/>
+                            <constraint firstItem="33Q-A4-k6j" firstAttribute="leading" secondItem="UkC-eP-gBE" secondAttribute="trailing" constant="10" id="wtR-8w-CfC"/>
                             <constraint firstItem="aio-oi-I9Q" firstAttribute="centerX" secondItem="O2A-EV-ayL" secondAttribute="centerX" id="wwS-bJ-KMh"/>
+                            <constraint firstItem="UkC-eP-gBE" firstAttribute="centerY" secondItem="p5B-A1-cZ2" secondAttribute="centerY" id="zcr-Wt-fUU"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="fifthButton" destination="Lj8-AZ-lbL" id="qeC-tM-QrF"/>
+                        <outlet property="fiftyMbButton" destination="33Q-A4-k6j" id="SxX-4n-hfm"/>
                         <outlet property="firstButton" destination="O2A-EV-ayL" id="o2D-C8-fjN"/>
+                        <outlet property="fiveMbButton" destination="p5B-A1-cZ2" id="ZS2-H9-2g2"/>
                         <outlet property="fourthButton" destination="aio-oi-I9Q" id="9Y0-XP-p6r"/>
+                        <outlet property="hundredMbButton" destination="Q2O-at-cgg" id="XBI-UH-LC8"/>
                         <outlet property="secondButton" destination="IY7-9V-1IF" id="hzm-wk-LZK"/>
                         <outlet property="sixthButton" destination="HQG-J4-aV1" id="upx-Li-KCG"/>
+                        <outlet property="tenMbButton" destination="Qry-BZ-phe" id="wJ4-nZ-zTS"/>
                         <outlet property="thirdButton" destination="GQs-d6-DMp" id="Vf3-HU-cA0"/>
+                        <outlet property="twentyMbButton" destination="UkC-eP-gBE" id="WyQ-lb-Mlv"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
