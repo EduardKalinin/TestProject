@@ -34,7 +34,6 @@ NSString *const twoHundredMb = @"http://download.thinkbroadband.com/200MB.zip";
 @property (weak, nonatomic) IBOutlet UIButton *hundredMbButton;
 @property (weak, nonatomic) IBOutlet UIActivityIndicatorView *activityIndicator;
 
-
 @end
 
 @implementation ViewController
@@ -48,7 +47,7 @@ NSString *const twoHundredMb = @"http://download.thinkbroadband.com/200MB.zip";
 
 - (void)loadFileWithURLString:(NSString *)urlString {
     __weak ViewController *weakself = self;
-    [weakself.activityIndicator startAnimating];
+    [self.activityIndicator startAnimating];
     NSURL *url = [NSURL URLWithString:urlString];
     [self.transport downloadFileWithURL:url completion:^(NSData *fileData, NSError *error) {
         [weakself.activityIndicator stopAnimating];

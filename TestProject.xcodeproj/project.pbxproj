@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		8B566B8B1F14B55800AB6A3A /* UIAlertController+Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B566B8A1F14B55800AB6A3A /* UIAlertController+Utils.m */; };
+		8B566B8E1F15095D00AB6A3A /* ImageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B566B8D1F15095D00AB6A3A /* ImageViewController.m */; };
 		8BD22CD71F137C7500DD96AE /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BD22CD61F137C7500DD96AE /* main.m */; };
 		8BD22CE01F137C7500DD96AE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8BD22CDE1F137C7500DD96AE /* Main.storyboard */; };
 		8BD22CE21F137C7500DD96AE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8BD22CE11F137C7500DD96AE /* Assets.xcassets */; };
@@ -20,6 +21,8 @@
 /* Begin PBXFileReference section */
 		8B566B891F14B55800AB6A3A /* UIAlertController+Utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIAlertController+Utils.h"; sourceTree = "<group>"; };
 		8B566B8A1F14B55800AB6A3A /* UIAlertController+Utils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIAlertController+Utils.m"; sourceTree = "<group>"; };
+		8B566B8C1F15095D00AB6A3A /* ImageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageViewController.h; sourceTree = "<group>"; };
+		8B566B8D1F15095D00AB6A3A /* ImageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageViewController.m; sourceTree = "<group>"; };
 		8BD22CD21F137C7500DD96AE /* TestProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TestProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8BD22CD61F137C7500DD96AE /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		8BD22CDF1F137C7500DD96AE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -108,6 +111,8 @@
 			children = (
 				8BD22CEE1F138C4500DD96AE /* ViewController.h */,
 				8BD22CEF1F138C4500DD96AE /* ViewController.m */,
+				8B566B8C1F15095D00AB6A3A /* ImageViewController.h */,
+				8B566B8D1F15095D00AB6A3A /* ImageViewController.m */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -192,6 +197,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8B566B8E1F15095D00AB6A3A /* ImageViewController.m in Sources */,
 				8B566B8B1F14B55800AB6A3A /* UIAlertController+Utils.m in Sources */,
 				8BD22CF01F138C4500DD96AE /* ViewController.m in Sources */,
 				8BD22CF71F138C7600DD96AE /* TransportLayer.m in Sources */,
