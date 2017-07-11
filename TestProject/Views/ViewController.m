@@ -10,6 +10,13 @@
 #import "TransportLayer.h"
 #import "UIAlertController+Utils.h"
 
+NSString *const fiveMb = @"http://download.thinkbroadband.com/5MB.zip";
+NSString *const tenMb = @"http://download.thinkbroadband.com/10MB.zip";
+NSString *const twentyMb = @"http://download.thinkbroadband.com/20MB.zip";
+NSString *const fiftyMb = @"http://download.thinkbroadband.com/50MB.zip";
+NSString *const hundredMb = @"http://download.thinkbroadband.com/100MB.zip";
+NSString *const twoHundredMb = @"http://download.thinkbroadband.com/200MB.zip";
+
 @interface ViewController ()
 
 @property (strong, nonatomic) TransportLayer *transport;
@@ -38,182 +45,66 @@
     
 }
 
+- (void)loadFileWithURLString:(NSString *)urlString {
+    NSURL *url = [NSURL URLWithString:urlString];
+    [self.transport downloadFileWithURL:url completion:^(NSData *fileData, NSError *error) {
+        
+        if (error) {
+            [UIAlertController showFromViewController:self
+                                                title:@"ERROR"
+                                              message:[NSString stringWithFormat:@"%@", error.localizedDescription]];
+        } else {
+            [UIAlertController showFromViewController:self
+                                                title:@"Download Complete"
+                                              message:[NSString stringWithFormat:@"Size = %lu", fileData.length]];
+        }
+    }];
+}
+
 #pragma mark - Actions
 
 - (IBAction)actionFirstButtonClicked:(id)sender {
-    NSURL *url = [NSURL URLWithString:@"http://download.thinkbroadband.com/5MB.zip"];
-    [self.transport downloadFileWithURL:url completion:^(NSData *fileData, NSError *error) {
-        
-        if (error) {
-            [UIAlertController showFromViewController:self
-                                                title:@"ERROR"
-                                              message:[NSString stringWithFormat:@"%@", error.localizedDescription]];
-        }else {
-            [UIAlertController showFromViewController:self
-                                                title:@"Download Complete"
-                                              message:[NSString stringWithFormat:@"Size = %lu", fileData.length]];
-        }
-    }];
+    [self loadFileWithURLString:fiveMb];
 }
 
 - (IBAction)actionSecondButtonClicked:(id)sender {
-    NSURL *url = [NSURL URLWithString:@"http://download.thinkbroadband.com/10MB.zip"];
-    [self.transport downloadFileWithURL:url completion:^(NSData *fileData, NSError *error) {
-        
-        if (error) {
-            [UIAlertController showFromViewController:self
-                                                title:@"ERROR"
-                                              message:[NSString stringWithFormat:@"%@", error.localizedDescription]];
-        }else {
-            [UIAlertController showFromViewController:self
-                                                title:@"Download Complete"
-                                              message:[NSString stringWithFormat:@"Size = %lu", fileData.length]];
-        }
-    }];
+    [self loadFileWithURLString:tenMb];
 }
 
 - (IBAction)actionThirdButtonClicked:(id)sender {
-    NSURL *url = [NSURL URLWithString:@"http://download.thinkbroadband.com/20MB.zip"];
-    [self.transport downloadFileWithURL:url completion:^(NSData *fileData, NSError *error) {
-        
-        if (error) {
-            [UIAlertController showFromViewController:self
-                                                title:@"ERROR"
-                                              message:[NSString stringWithFormat:@"%@", error.localizedDescription]];
-        }else {
-            [UIAlertController showFromViewController:self
-                                                title:@"Download Complete"
-                                              message:[NSString stringWithFormat:@"Size = %lu", fileData.length]];
-        }
-    }];
+    [self loadFileWithURLString:twentyMb];
 }
 
 - (IBAction)actionFourthButtonClicked:(id)sender {
-    NSURL *url = [NSURL URLWithString:@"http://download.thinkbroadband.com/50MB.zip"];
-    [self.transport downloadFileWithURL:url completion:^(NSData *fileData, NSError *error) {
-        
-        if (error) {
-            [UIAlertController showFromViewController:self
-                                                title:@"ERROR"
-                                              message:[NSString stringWithFormat:@"%@", error.localizedDescription]];
-        }else {
-            [UIAlertController showFromViewController:self
-                                                title:@"Download Complete"
-                                              message:[NSString stringWithFormat:@"Size = %lu", fileData.length]];
-        }
-    }];
+    [self loadFileWithURLString:fiftyMb];
 }
 
 - (IBAction)actionFifthButtonClicked:(id)sender {
-    NSURL *url = [NSURL URLWithString:@"http://download.thinkbroadband.com/100MB.zip"];
-    [self.transport downloadFileWithURL:url completion:^(NSData *fileData, NSError *error) {
-        
-        if (error) {
-            [UIAlertController showFromViewController:self
-                                                title:@"ERROR"
-                                              message:[NSString stringWithFormat:@"%@", error.localizedDescription]];
-        }else {
-            [UIAlertController showFromViewController:self
-                                                title:@"Download Complete"
-                                              message:[NSString stringWithFormat:@"Size = %lu", fileData.length]];
-        }
-    }];
+    [self loadFileWithURLString:hundredMb];
 }
 
 - (IBAction)actionSixthButtonClicked:(id)sender {
-    NSURL *url = [NSURL URLWithString:@"http://download.thinkbroadband.com/200MB.zip"];
-    [self.transport downloadFileWithURL:url completion:^(NSData *fileData, NSError *error) {
-        
-        if (error) {
-            [UIAlertController showFromViewController:self
-                                                title:@"ERROR"
-                                              message:[NSString stringWithFormat:@"%@", error.localizedDescription]];
-        }else {
-            [UIAlertController showFromViewController:self
-                                                title:@"Download Complete"
-                                              message:[NSString stringWithFormat:@"Size = %lu", fileData.length]];
-        }
-    }];
+    [self loadFileWithURLString:twoHundredMb];
 }
+
 - (IBAction)actionFiveMbButtonClicked:(id)sender {
-    NSURL *url = [NSURL URLWithString:@"http://download.thinkbroadband.com/5MB.zip"];
-    [self.transport downloadFileWithURL:url completion:^(NSData *fileData, NSError *error) {
-        
-        if (error) {
-            [UIAlertController showFromViewController:self
-                                                title:@"ERROR"
-                                              message:[NSString stringWithFormat:@"%@", error.localizedDescription]];
-        }else {
-            [UIAlertController showFromViewController:self
-                                                title:@"Download Complete"
-                                              message:[NSString stringWithFormat:@"Size = %lu", fileData.length]];
-        }
-    }];
-
+    [self loadFileWithURLString:fiveMb];
 }
+
 - (IBAction)actionTenMbButtonClicked:(id)sender {
-    NSURL *url = [NSURL URLWithString:@"http://download.thinkbroadband.com/10MB.zip"];
-    [self.transport downloadFileWithURL:url completion:^(NSData *fileData, NSError *error) {
-        
-        if (error) {
-            [UIAlertController showFromViewController:self
-                                                title:@"ERROR"
-                                              message:[NSString stringWithFormat:@"%@", error.localizedDescription]];
-        }else {
-            [UIAlertController showFromViewController:self
-                                                title:@"Download Complete"
-                                              message:[NSString stringWithFormat:@"Size = %lu", fileData.length]];
-        }
-    }];
-
+    [self loadFileWithURLString:tenMb];
 }
+
 - (IBAction)actionTwentyMbButtonClicked:(id)sender {
-    NSURL *url = [NSURL URLWithString:@"http://download.thinkbroadband.com/20MB.zip"];
-    [self.transport downloadFileWithURL:url completion:^(NSData *fileData, NSError *error) {
-        
-        if (error) {
-            [UIAlertController showFromViewController:self
-                                                title:@"ERROR"
-                                              message:[NSString stringWithFormat:@"%@", error.localizedDescription]];
-        }else {
-            [UIAlertController showFromViewController:self
-                                                title:@"Download Complete"
-                                              message:[NSString stringWithFormat:@"Size = %lu", fileData.length]];
-        }
-    }];
-
+    [self loadFileWithURLString:twentyMb];
 }
+
 - (IBAction)actionFiftyMbButtonClicked:(id)sender {
-    NSURL *url = [NSURL URLWithString:@"http://download.thinkbroadband.com/50MB.zip"];
-    [self.transport downloadFileWithURL:url completion:^(NSData *fileData, NSError *error) {
-        
-        if (error) {
-            [UIAlertController showFromViewController:self
-                                                title:@"ERROR"
-                                              message:[NSString stringWithFormat:@"%@", error.localizedDescription]];
-        }else {
-            [UIAlertController showFromViewController:self
-                                                title:@"Download Complete"
-                                              message:[NSString stringWithFormat:@"Size = %lu", fileData.length]];
-        }
-    }];
-
+    [self loadFileWithURLString:fiftyMb];
 }
-- (IBAction)actionHundredMbButtonClicked:(id)sender {
-    NSURL *url = [NSURL URLWithString:@"http://download.thinkbroadband.com/100MB.zip"];
-    [self.transport downloadFileWithURL:url completion:^(NSData *fileData, NSError *error) {
-        
-        if (error) {
-            [UIAlertController showFromViewController:self
-                                                title:@"ERROR"
-                                              message:[NSString stringWithFormat:@"%@", error.localizedDescription]];
-        }else {
-            [UIAlertController showFromViewController:self
-                                                title:@"Download Complete"
-                                              message:[NSString stringWithFormat:@"Size = %lu", fileData.length]];
-        }
-    }];
 
+- (IBAction)actionHundredMbButtonClicked:(id)sender {
+    [self loadFileWithURLString:hundredMb];
 }
 
 @end
