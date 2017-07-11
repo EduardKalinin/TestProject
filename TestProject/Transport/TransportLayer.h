@@ -11,5 +11,6 @@
 @interface TransportLayer : NSObject
 
 - (void)downloadFileWithURL:(NSURL *)url completion:(void(^)(NSData *fileData, NSError *error))completion;
+- (void)getDataWithURL:(NSURL *)url completion:(void (^)(NSData *data, NSError *error))transportCompletion;
 
 @end

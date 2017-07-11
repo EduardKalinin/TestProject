@@ -38,4 +38,14 @@
     }] resume];
 }
 
+- (void)getDataWithURL:(NSURL *)url completion:(void (^)(NSData *, NSError *))transportCompletion {
+    [[self.session dataTaskWithURL:url completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
+        dispatch_async(dispatch_get_main_queue(), ^{
+            if (transportCompletion) {
+                transportCompletion(data, error);
+            }
+        });
+    }] resume];
+}
+
 @end
