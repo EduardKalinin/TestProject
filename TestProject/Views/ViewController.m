@@ -50,14 +50,16 @@ NSString *const twoHundredMb = @"http://download.thinkbroadband.com/200MB.zip";
     NSURL *url = [NSURL URLWithString:urlString];
     [self.transport downloadFileWithURL:url completion:^(NSData *fileData, NSError *error) {
         __strong ViewController *strongSelf = weakself;
-        if (error) {
-            [UIAlertController showFromViewController:strongSelf
-                                                title:@"ERROR"
-                                              message:[NSString stringWithFormat:@"%@", error.localizedDescription]];
-        } else {
-            [UIAlertController showFromViewController:strongSelf
-                                                title:@"Download Complete"
-                                              message:[NSString stringWithFormat:@"Size = %lu", fileData.length]];
+        if (strongSelf) {
+            if (error) {
+                [UIAlertController showFromViewController:strongSelf
+                                                    title:@"ERROR"
+                                                  message:[NSString stringWithFormat:@"%@", error.localizedDescription]];
+            } else {
+                [UIAlertController showFromViewController:strongSelf
+                                                    title:@"Download Complete"
+                                                  message:[NSString stringWithFormat:@"Size = %lu", fileData.length]];
+            }
         }
     }];
 }
