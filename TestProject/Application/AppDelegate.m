@@ -7,28 +7,14 @@
 //
 
 #import "AppDelegate.h"
-#import "TransportLayer.h"
 
 @interface AppDelegate ()
-
-@property (strong, nonatomic) TransportLayer *transport;
 
 @end
 
 @implementation AppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    
-    self.transport = [[TransportLayer alloc] init];
-    NSURL *url = [NSURL URLWithString:@"http://download.thinkbroadband.com/5MB.zip"];
-    [self.transport downloadFileWithURL:url completion:^(NSData *fileData, NSError *error) {
-        
-        if (error) {
-            NSLog(@"%@",error);
-        } else {
-            NSLog(@"%lu",fileData.length);
-        }
-    }];
     
     return YES;
 }

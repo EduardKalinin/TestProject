@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8B566B8B1F14B55800AB6A3A /* UIAlertController+Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B566B8A1F14B55800AB6A3A /* UIAlertController+Utils.m */; };
 		8BD22CD71F137C7500DD96AE /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BD22CD61F137C7500DD96AE /* main.m */; };
 		8BD22CE01F137C7500DD96AE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8BD22CDE1F137C7500DD96AE /* Main.storyboard */; };
 		8BD22CE21F137C7500DD96AE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8BD22CE11F137C7500DD96AE /* Assets.xcassets */; };
@@ -17,6 +18,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		8B566B891F14B55800AB6A3A /* UIAlertController+Utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIAlertController+Utils.h"; sourceTree = "<group>"; };
+		8B566B8A1F14B55800AB6A3A /* UIAlertController+Utils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIAlertController+Utils.m"; sourceTree = "<group>"; };
 		8BD22CD21F137C7500DD96AE /* TestProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TestProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8BD22CD61F137C7500DD96AE /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		8BD22CDF1F137C7500DD96AE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -42,6 +45,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8B566B881F14B55800AB6A3A /* Support */ = {
+			isa = PBXGroup;
+			children = (
+				8B566B891F14B55800AB6A3A /* UIAlertController+Utils.h */,
+				8B566B8A1F14B55800AB6A3A /* UIAlertController+Utils.m */,
+			);
+			path = Support;
+			sourceTree = "<group>";
+		};
 		8BD22CC91F137C7400DD96AE = {
 			isa = PBXGroup;
 			children = (
@@ -61,6 +73,7 @@
 		8BD22CD41F137C7500DD96AE /* TestProject */ = {
 			isa = PBXGroup;
 			children = (
+				8B566B881F14B55800AB6A3A /* Support */,
 				8BD22CF11F138C4F00DD96AE /* Application */,
 				8BD22CED1F138C4500DD96AE /* Views */,
 				8BD22CEC1F138AAF00DD96AE /* Transport */,
@@ -179,6 +192,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8B566B8B1F14B55800AB6A3A /* UIAlertController+Utils.m in Sources */,
 				8BD22CF01F138C4500DD96AE /* ViewController.m in Sources */,
 				8BD22CF71F138C7600DD96AE /* TransportLayer.m in Sources */,
 				8BD22CD71F137C7500DD96AE /* main.m in Sources */,
@@ -303,6 +317,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = TestProject/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.iosCourse.TestProject;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -314,6 +329,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = TestProject/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.iosCourse.TestProject;
 				PRODUCT_NAME = "$(TARGET_NAME)";

@@ -27,7 +27,7 @@
 }
 
 - (void)downloadFileWithURL:(NSURL *)url completion:(void (^)(NSData *, NSError *))completion {
-    [self.session downloadTaskWithURL:url completionHandler:^(NSURL * _Nullable location, NSURLResponse * _Nullable response, NSError * _Nullable error) {
+    [[self.session downloadTaskWithURL:url completionHandler:^(NSURL * _Nullable location, NSURLResponse * _Nullable response, NSError * _Nullable error) {
         
         if (error) {
             completion(nil, error);
@@ -35,7 +35,7 @@
             NSData *data = [NSData dataWithContentsOfURL:location];
             completion(data, error);
         }
-    }];
+    }] resume];
 }
 
 @end

@@ -1,14 +1,17 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -16,11 +19,79 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="O2A-EV-ayL">
+                                <rect key="frame" x="136" y="80" width="103" height="30"/>
+                                <state key="normal" title="Download 5mb"/>
+                                <connections>
+                                    <action selector="actionFirstButtonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="gMY-UO-rfx"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GQs-d6-DMp">
+                                <rect key="frame" x="131" y="260" width="112" height="30"/>
+                                <state key="normal" title="Download 20mb"/>
+                                <connections>
+                                    <action selector="actionThirdButtonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="soj-va-mxm"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aio-oi-I9Q">
+                                <rect key="frame" x="131" y="350" width="113" height="30"/>
+                                <state key="normal" title="Download 50mb"/>
+                                <connections>
+                                    <action selector="actionFourthButtonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="HWd-sX-Jhu"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lj8-AZ-lbL">
+                                <rect key="frame" x="127" y="440" width="120" height="30"/>
+                                <state key="normal" title="Download 100mb"/>
+                                <connections>
+                                    <action selector="actionFifthButtonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="aY7-zb-n3v"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HQG-J4-aV1">
+                                <rect key="frame" x="126" y="530" width="122" height="30"/>
+                                <state key="normal" title="Download 200mb"/>
+                                <connections>
+                                    <action selector="actionSixthButtonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="W7I-zc-7wa"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IY7-9V-1IF">
+                                <rect key="frame" x="132" y="170" width="110" height="30"/>
+                                <state key="normal" title="Download 10mb"/>
+                                <connections>
+                                    <action selector="actionSecondButtonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="rIQ-md-dSl"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="IY7-9V-1IF" firstAttribute="centerX" secondItem="O2A-EV-ayL" secondAttribute="centerX" id="0cp-39-RXj"/>
+                            <constraint firstAttribute="trailing" secondItem="O2A-EV-ayL" secondAttribute="trailing" constant="136" id="NGb-0G-YED"/>
+                            <constraint firstItem="O2A-EV-ayL" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="136" id="ON3-ry-K4M"/>
+                            <constraint firstItem="Lj8-AZ-lbL" firstAttribute="top" secondItem="aio-oi-I9Q" secondAttribute="bottom" constant="60" id="RXK-GK-I6Z"/>
+                            <constraint firstItem="Lj8-AZ-lbL" firstAttribute="centerX" secondItem="O2A-EV-ayL" secondAttribute="centerX" id="Sfo-sy-4yU"/>
+                            <constraint firstItem="IY7-9V-1IF" firstAttribute="top" secondItem="O2A-EV-ayL" secondAttribute="bottom" constant="60" id="ZS7-fc-kmc"/>
+                            <constraint firstItem="HQG-J4-aV1" firstAttribute="centerX" secondItem="O2A-EV-ayL" secondAttribute="centerX" id="efb-aj-SvN"/>
+                            <constraint firstItem="GQs-d6-DMp" firstAttribute="top" secondItem="IY7-9V-1IF" secondAttribute="bottom" constant="60" id="hHR-yt-xLr"/>
+                            <constraint firstItem="O2A-EV-ayL" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="60" id="kMR-zC-w7X"/>
+                            <constraint firstItem="HQG-J4-aV1" firstAttribute="top" secondItem="Lj8-AZ-lbL" secondAttribute="bottom" constant="60" id="nJR-nj-2Zc"/>
+                            <constraint firstItem="GQs-d6-DMp" firstAttribute="centerX" secondItem="O2A-EV-ayL" secondAttribute="centerX" id="p96-cM-T3V"/>
+                            <constraint firstItem="aio-oi-I9Q" firstAttribute="top" secondItem="GQs-d6-DMp" secondAttribute="bottom" constant="60" id="pzR-Dw-iem"/>
+                            <constraint firstItem="aio-oi-I9Q" firstAttribute="centerX" secondItem="O2A-EV-ayL" secondAttribute="centerX" id="wwS-bJ-KMh"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="fifthButton" destination="Lj8-AZ-lbL" id="qeC-tM-QrF"/>
+                        <outlet property="firstButton" destination="O2A-EV-ayL" id="o2D-C8-fjN"/>
+                        <outlet property="fourthButton" destination="aio-oi-I9Q" id="9Y0-XP-p6r"/>
+                        <outlet property="secondButton" destination="IY7-9V-1IF" id="hzm-wk-LZK"/>
+                        <outlet property="sixthButton" destination="HQG-J4-aV1" id="upx-Li-KCG"/>
+                        <outlet property="thirdButton" destination="GQs-d6-DMp" id="Vf3-HU-cA0"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="4" y="61"/>
         </scene>
     </scenes>
 </document>
