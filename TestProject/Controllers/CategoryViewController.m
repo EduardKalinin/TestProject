@@ -26,6 +26,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.navigationItem.title = @"Category";
     self.categoryService = [[CategoryService alloc] init];
     [self loadData];
 }
@@ -49,10 +50,17 @@
 #pragma mark - UITableViewDelegate
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    Category *selectedCategory = [self.items objectAtIndex:indexPath.row];
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+
+    Category *selectedCategory = self.items[indexPath.row];
     PhotoViewController *photoVC = [self.storyboard instantiateViewControllerWithIdentifier:NSStringFromClass([PhotoViewController class])];
     photoVC.cat = selectedCategory;
     [self.navigationController pushViewController:photoVC animated:true];
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    CGFloat tableHeight = CGRectGetHeight(tableView.bounds) - fabs(tableView.contentOffset.y);
+    return tableHeight/self.items.count;
 }
 
 #pragma mark - Load Data

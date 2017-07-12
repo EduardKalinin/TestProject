@@ -8,7 +8,6 @@
 
 #import "PhotoViewController.h"
 #import "CustomCollectionViewCell.h"
-#import "PhotosService.h"
 #import "Photo.h"
 #import "Category.h"
 
@@ -16,7 +15,6 @@
 
 @property (weak, nonatomic) IBOutlet UICollectionView *colectionView;
 @property (strong, nonatomic) NSArray *items;
-@property (strong, nonatomic) PhotosService *photoService;
 
 @end
 
@@ -24,7 +22,6 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.photoService = [[PhotosService alloc] init];
     
     self.items = self.cat.photos;
 }
