@@ -1,15 +1,15 @@
 //
-//  CustomTableViewCell.m
+//  CustomCollectionViewCell.m
 //  TestProject
 //
-//  Created by Developer on 7/11/17.
+//  Created by Developer on 7/12/17.
 //  Copyright © 2017 Developer. All rights reserved.
 //
 
-#import "CustomTableViewCell.h"
+#import "CustomCollectionViewCell.h"
 #import "TransportLayer.h"
 
-@interface CustomTableViewCell()
+@interface CustomCollectionViewCell()
 
 @property (weak, nonatomic) IBOutlet UIImageView *image;
 @property (weak, nonatomic) IBOutlet UILabel *titleLabel;
@@ -17,18 +17,18 @@
 
 @end
 
-@implementation CustomTableViewCell
+@implementation CustomCollectionViewCell
 
 - (void)awakeFromNib {
     [super awakeFromNib];
     self.transport = [[TransportLayer alloc] init];
 }
 
-- (void)configureWithCategory:(Category *)category {
-    self.titleLabel.text = category.name;
+- (void)configureWithPhoto:(Photo *)photo {
+    self.titleLabel.text = photo.name;
     
     __weak typeof(self) weakself = self;
-    [self.transport downloadFileWithURL:category.url completion:^(NSData *fileData, NSError *error) {
+    [self.transport downloadFileWithURL:photo.url completion:^(NSData *fileData, NSError *error) {
         __strong typeof(self) strongSelf = weakself;
         if (strongSelf) {
             if (error) {

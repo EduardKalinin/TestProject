@@ -10,15 +10,15 @@
 #import "Category.h"
 #import "CategoryService.h"
 #import "CustomTableViewCell.h"
-#import "TransportLayer.h"
 #import "UIAlertController+Utils.h"
+#import "PhotoViewController.h"
+#import "Photo.h"
 
 @interface CategoryViewController () <UITableViewDataSource, UITableViewDelegate>
 
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 @property (strong, nonatomic) NSArray *items;
 @property (strong, nonatomic) CategoryService *categoryService;
-@property (strong, nonatomic) TransportLayer *transport;
 
 @end
 
@@ -26,8 +26,6 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
-    self.transport = [[TransportLayer alloc] init];
     self.categoryService = [[CategoryService alloc] init];
     [self loadData];
 }
@@ -41,25 +39,9 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     NSString *cellIdentifier = NSStringFromClass([CustomTableViewCell class]);
     CustomTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier];
-
-    Category *category = [self.items objectAtIndex:indexPath.row];
-    cell.titleLabel.text = category.name;
     
-    __weak CategoryViewController *weakself = self;
-    [self.transport downloadFileWithURL:category.url completion:^(NSData *fileData, NSError *error) {
-        __strong CategoryViewController *strongSelf = weakself;
-        if (strongSelf) {
-            if (error) {
-                [UIAlertController showFromViewController:strongSelf
-                                                    title:@"ERROR"
-                                                  message:[NSString stringWithFormat:@"%@", error.localizedDescription]];
-            } else {
-                UIImage *image = [UIImage imageWithData:fileData];
-                cell.image.image = image;
-                
-            }
-        }
-    }];
+    Category *category = [self.items objectAtIndex:indexPath.row];
+    [cell configureWithCategory:category];
     
     return cell;
 }
@@ -67,7 +49,10 @@
 #pragma mark - UITableViewDelegate
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    
+    Category *selectedCategory = [self.items objectAtIndex:indexPath.row];
+    PhotoViewController *photoVC = [self.storyboard instantiateViewControllerWithIdentifier:NSStringFromClass([PhotoViewController class])];
+    photoVC.cat = selectedCategory;
+    [self.navigationController pushViewController:photoVC animated:true];
 }
 
 #pragma mark - Load Data

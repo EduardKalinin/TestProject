@@ -7,10 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Category.h"
 
 @interface CustomTableViewCell : UITableViewCell
 
-@property (weak, nonatomic) IBOutlet UIImageView *image;
-@property (weak, nonatomic) IBOutlet UILabel *titleLabel;
+- (void)configureWithCategory:(Category *)category;
 
 @end

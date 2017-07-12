@@ -34,7 +34,6 @@
             } else {
                 UIImage *image = [UIImage imageWithData:fileData];
                 strongSelf.imageView.image = image;
-                
             }
         }
     }];

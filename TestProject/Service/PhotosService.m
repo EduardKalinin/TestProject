@@ -39,7 +39,7 @@
                                     [items addObject:photo];
                                 }
                                 if (completion) {
-                                    completion(items, error);
+                                    completion ? completion(items, nil) : nil;
                                 }
                             }
                         }];
