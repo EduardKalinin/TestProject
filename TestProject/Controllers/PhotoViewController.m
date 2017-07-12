@@ -11,7 +11,7 @@
 #import "Photo.h"
 #import "Category.h"
 
-@interface PhotoViewController () <UICollectionViewDataSource, UICollectionViewDelegate>
+@interface PhotoViewController () <UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout>
 
 @property (weak, nonatomic) IBOutlet UICollectionView *colectionView;
 @property (strong, nonatomic) NSArray *items;
@@ -22,7 +22,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
+    self.title = self.cat.name;
     self.items = self.cat.photos;
 }
 
@@ -39,6 +39,32 @@
     [cell configureWithPhoto:photo];
     
     return cell;
+}
+
+#pragma mark - UICollectionViewDelegateFlowLayout
+
+- (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath {
+    
+    CGFloat padding = 10.0f;
+    CGFloat side = (CGRectGetWidth(collectionView.bounds) - padding) / 2;
+    CGSize collectionViewSize = CGSizeMake(side, side);
+    
+    return collectionViewSize;
+}
+
+- (UIEdgeInsets)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout insetForSectionAtIndex:(NSInteger)section {
+    
+    return UIEdgeInsetsZero;
+}
+
+- (CGFloat)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout minimumLineSpacingForSectionAtIndex:(NSInteger)section {
+    
+    return 10.0f;
+}
+
+- (CGFloat)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout minimumInteritemSpacingForSectionAtIndex:(NSInteger)section {
+    
+    return 10.0f;
 }
 
 @end

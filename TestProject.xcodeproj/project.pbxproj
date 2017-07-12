@@ -109,10 +109,10 @@
 		8B566BB31F16511800AB6A3A /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				8B566BB41F16511800AB6A3A /* CategoryViewController.h */,
-				8B566BB51F16511800AB6A3A /* CategoryViewController.m */,
 				8B566BB61F16511800AB6A3A /* ImageViewController.h */,
 				8B566BB71F16511800AB6A3A /* ImageViewController.m */,
+				8B566BB41F16511800AB6A3A /* CategoryViewController.h */,
+				8B566BB51F16511800AB6A3A /* CategoryViewController.m */,
 				8B566BB81F16511800AB6A3A /* PhotoViewController.h */,
 				8B566BB91F16511800AB6A3A /* PhotoViewController.m */,
 				8B566BBA1F16511800AB6A3A /* ViewController.h */,
