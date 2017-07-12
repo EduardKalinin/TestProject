@@ -40,7 +40,7 @@
     NSString *cellIdentifier = NSStringFromClass([CustomTableViewCell class]);
     CustomTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier];
     
-    Category *category = [self.items objectAtIndex:indexPath.row];
+    Category *category = self.items[indexPath.row];
     [cell configureWithCategory:category];
     
     return cell;

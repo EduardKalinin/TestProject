@@ -8,6 +8,7 @@
 
 #import "CustomCollectionViewCell.h"
 #import "TransportLayer.h"
+#import "Photo.h"
 
 @interface CustomCollectionViewCell()
 
@@ -24,6 +25,11 @@
     self.transport = [[TransportLayer alloc] init];
 }
 
+- (void)prepareForReuse {
+    [super prepareForReuse];
+    self.image.image = nil;
+}
+
 - (void)configureWithPhoto:(Photo *)photo {
     self.titleLabel.text = photo.name;
     
@@ -34,7 +40,7 @@
             if (error) {
                 NSLog(@"%@", error);
             } else {
-                self.image.image = [UIImage imageWithData:fileData];
+                strongSelf.image.image = [UIImage imageWithData:fileData];
             }
         }
     }];

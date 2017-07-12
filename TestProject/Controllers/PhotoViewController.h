@@ -7,7 +7,7 @@
 //
 
 #import "ViewController.h"
-#import "Category.h"
+@class Category;
 
 @interface PhotoViewController : ViewController
 

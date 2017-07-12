@@ -10,6 +10,7 @@
 #import "CustomCollectionViewCell.h"
 #import "PhotosService.h"
 #import "Photo.h"
+#import "Category.h"
 
 @interface PhotoViewController () <UICollectionViewDataSource, UICollectionViewDelegate>
 
@@ -37,7 +38,7 @@
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
     CustomCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:NSStringFromClass([CustomCollectionViewCell class]) forIndexPath:indexPath];
     
-    Photo *photo = [self.items objectAtIndex:indexPath.row];
+    Photo *photo = self.items[indexPath.row];
     [cell configureWithPhoto:photo];
     
     return cell;

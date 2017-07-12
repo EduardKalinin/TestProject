@@ -8,6 +8,7 @@
 
 #import "CustomTableViewCell.h"
 #import "TransportLayer.h"
+#import "Category.h"
 
 @interface CustomTableViewCell()
 
@@ -24,6 +25,11 @@
     self.transport = [[TransportLayer alloc] init];
 }
 
+- (void)prepareForReuse {
+    [super prepareForReuse];
+    self.image.image = nil;
+}
+
 - (void)configureWithCategory:(Category *)category {
     self.titleLabel.text = category.name;
     
@@ -34,7 +40,7 @@
             if (error) {
                 NSLog(@"%@", error);
             } else {
-                self.image.image = [UIImage imageWithData:fileData];
+                strongSelf.image.image = [UIImage imageWithData:fileData];
             }
         }
     }];

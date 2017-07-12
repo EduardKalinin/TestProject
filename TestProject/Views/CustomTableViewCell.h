@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "Category.h"
+@class Category;
 
 @interface CustomTableViewCell : UITableViewCell
 

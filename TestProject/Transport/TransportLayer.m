@@ -37,7 +37,6 @@
                 completion ? completion(data, error) : nil;
             }
         });
-        
     }] resume];
 }
 
@@ -57,7 +56,6 @@
                 }
             }
         });
-        
     }] resume];
 }
 
