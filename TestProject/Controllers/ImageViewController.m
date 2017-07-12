@@ -7,13 +7,12 @@
 //
 
 #import "ImageViewController.h"
-#import "TransportLayer.h"
+#import "CategoryService.h"
 #import "UIAlertController+Utils.h"
 
 @interface ImageViewController ()
 
 @property (weak, nonatomic) IBOutlet UIImageView *imageView;
-@property (strong, nonatomic) TransportLayer *transport;
 
 @end
 
@@ -21,22 +20,23 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
     __weak ImageViewController *weakself = self;
-    self.transport = [[TransportLayer alloc] init];
     NSURL *url = [NSURL URLWithString:@"http://images.firstcovers.com/covers/i/its_easy_if_you_try-5332.jpg"];
-    [self.transport downloadFileWithURL:url completion:^(NSData *fileData, NSError *error) {
-        __strong ImageViewController *strongSelf = weakself;
-        if (strongSelf) {
-            if (error) {
-                [UIAlertController showFromViewController:strongSelf
-                                                    title:@"ERROR"
-                                                  message:[NSString stringWithFormat:@"%@", error.localizedDescription]];
-            } else {
-                UIImage *image = [UIImage imageWithData:fileData];
-                strongSelf.imageView.image = image;
-            }
-        }
-    }];
+    
+    [[CategoryService sharedInstance]
+     getImageWithUrl:url
+     completion:^(UIImage *image, NSError *error) {
+         if (weakself) {
+             if (error) {
+                 [UIAlertController showFromViewController:weakself
+                                                     title:@"ERROR"
+                                                   message:[NSString stringWithFormat:@"%@", error.localizedDescription]];
+             } else {
+                 weakself.imageView.image = image;
+             }
+         }
+     }];
 }
 
 @end

@@ -7,14 +7,13 @@
 //
 
 #import "CustomTableViewCell.h"
-#import "TransportLayer.h"
 #import "Category.h"
+#import "CategoryService.h"
 
 @interface CustomTableViewCell()
 
 @property (weak, nonatomic) IBOutlet UIImageView *image;
 @property (weak, nonatomic) IBOutlet UILabel *titleLabel;
-@property (strong, nonatomic) TransportLayer *transport;
 
 @end
 
@@ -22,7 +21,6 @@
 
 - (void)awakeFromNib {
     [super awakeFromNib];
-    self.transport = [[TransportLayer alloc] init];
 }
 
 - (void)prepareForReuse {
@@ -34,13 +32,13 @@
     self.titleLabel.text = category.name;
     
     __weak typeof(self) weakself = self;
-    [self.transport downloadFileWithURL:category.url completion:^(NSData *fileData, NSError *error) {
-        __strong typeof(self) strongSelf = weakself;
-        if (strongSelf) {
+    
+    [[CategoryService sharedInstance] getImageWithUrl:category.url completion:^(UIImage *image, NSError *error) {
+        if (weakself) {
             if (error) {
                 NSLog(@"%@", error);
             } else {
-                strongSelf.image.image = [UIImage imageWithData:fileData];
+                weakself.image.image = image;
             }
         }
     }];

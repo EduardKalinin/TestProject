@@ -7,14 +7,13 @@
 //
 
 #import "CustomCollectionViewCell.h"
-#import "TransportLayer.h"
 #import "Photo.h"
+#import "CategoryService.h"
 
 @interface CustomCollectionViewCell()
 
 @property (weak, nonatomic) IBOutlet UIImageView *image;
 @property (weak, nonatomic) IBOutlet UILabel *titleLabel;
-@property (strong, nonatomic) TransportLayer *transport;
 
 @end
 
@@ -22,7 +21,6 @@
 
 - (void)awakeFromNib {
     [super awakeFromNib];
-    self.transport = [[TransportLayer alloc] init];
 }
 
 - (void)prepareForReuse {
@@ -34,13 +32,13 @@
     self.titleLabel.text = photo.name;
     
     __weak typeof(self) weakself = self;
-    [self.transport downloadFileWithURL:photo.url completion:^(NSData *fileData, NSError *error) {
-        __strong typeof(self) strongSelf = weakself;
-        if (strongSelf) {
+    
+    [[CategoryService sharedInstance] getImageWithUrl:photo.url completion:^(UIImage *image, NSError *error) {
+        if (weakself) {
             if (error) {
                 NSLog(@"%@", error);
             } else {
-                strongSelf.image.image = [UIImage imageWithData:fileData];
+                weakself.image.image = image;
             }
         }
     }];

@@ -219,7 +219,7 @@
                                                     <rect key="frame" x="0.0" y="0.0" width="154" height="129"/>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QmM-Gy-gQy">
-                                                    <rect key="frame" x="0.0" y="98" width="154" height="21"/>
+                                                    <rect key="frame" x="0.0" y="108" width="154" height="21"/>
                                                     <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.29999999999999999" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -230,7 +230,7 @@
                                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.30397227110000002" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstItem="lIY-0C-cs9" firstAttribute="top" secondItem="CcT-NL-VWU" secondAttribute="top" id="B4r-34-rxu"/>
-                                            <constraint firstAttribute="bottom" secondItem="QmM-Gy-gQy" secondAttribute="bottom" constant="10" id="CHf-sf-th0"/>
+                                            <constraint firstAttribute="bottom" secondItem="QmM-Gy-gQy" secondAttribute="bottom" id="CHf-sf-th0"/>
                                             <constraint firstItem="QmM-Gy-gQy" firstAttribute="leading" secondItem="CcT-NL-VWU" secondAttribute="leading" id="DPC-yb-Kfh"/>
                                             <constraint firstAttribute="trailing" secondItem="lIY-0C-cs9" secondAttribute="trailing" id="FJU-xN-jCC"/>
                                             <constraint firstAttribute="bottom" secondItem="lIY-0C-cs9" secondAttribute="bottom" id="hOY-hC-Fmc"/>
