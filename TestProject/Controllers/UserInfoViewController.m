@@ -84,9 +84,15 @@
 #pragma mark - UITextFieldDelegate
 
 - (BOOL)textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string {
+    NSString *text = [textField.text stringByReplacingCharactersInRange:range withString:string];
+    
+    if ([textField isEqual:self.zipTextField] && text.length > 6) {
+        return NO;
+    }
+    
     if ([textField isEqual:self.phoneTextField] || [textField isEqual:self.zipTextField]) {
         NSCharacterSet *numbersOnly = [NSCharacterSet decimalDigitCharacterSet];
-        NSCharacterSet *characterSetFromTextField = [NSCharacterSet characterSetWithCharactersInString:textField.text];
+        NSCharacterSet *characterSetFromTextField = [NSCharacterSet characterSetWithCharactersInString:text];
         
         BOOL stringIsValid = [numbersOnly isSupersetOfSet:characterSetFromTextField];
         return stringIsValid;
