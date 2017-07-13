@@ -29,13 +29,17 @@
     [self configureLayout];
 }
 
+- (void)dealloc {
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
+}
+
 #pragma mark - Helpers
 
 - (void)configureLayout {
     [self configureNextButtonWithTextField:self.sexTextField selector:@selector(nextClickedWithSex:)];
     [self configureNextButtonWithTextField:self.phoneTextField selector:@selector(nextClickedWithPhone:)];
     [self configureNextButtonWithTextField:self.zipTextField selector:@selector(nextClickedWithZip:)];
-    [self signWithNotification];
+    [self subsribeWithNotifications];
     [self configurePickerView];
     
     UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self.view action:@selector(endEditing:)];
@@ -64,19 +68,19 @@
 
 #pragma mark - Actions
 
-- (IBAction)nextClickedWithPhone:(id)sender {
+- (void)nextClickedWithPhone:(UIBarButtonItem *)sender {
     if (self.phoneTextField) {
         [self.addressTextField becomeFirstResponder];
     }
 }
 
-- (IBAction)nextClickedWithZip:(id)sender {
+- (void)nextClickedWithZip:(UIBarButtonItem *)sender {
     if (self.zipTextField) {
         [self.emailTextField becomeFirstResponder];
     }
 }
 
-- (IBAction)nextClickedWithSex:(id)sender {
+- (void)nextClickedWithSex:(UIBarButtonItem *)sender {
     if (self.zipTextField) {
         [self.phoneTextField becomeFirstResponder];
     }
@@ -95,8 +99,7 @@
         NSCharacterSet *numbersOnly = [NSCharacterSet decimalDigitCharacterSet];
         NSCharacterSet *characterSetFromTextField = [NSCharacterSet characterSetWithCharactersInString:text];
         
-        BOOL stringIsValid = [numbersOnly isSupersetOfSet:characterSetFromTextField];
-        return stringIsValid;
+        return [numbersOnly isSupersetOfSet:characterSetFromTextField];
     }
     return YES;
 }
@@ -114,16 +117,18 @@
     return YES;
 }
 
-- (void)signWithNotification {
+#pragma mark - Notifications
+
+- (void)subsribeWithNotifications {
     [[NSNotificationCenter defaultCenter] addObserver:self
                                              selector:@selector(handleKeyboardWillShowNotification:)
                                                  name:UIKeyboardWillShowNotification
-                                               object:self.view.window];
+                                               object:nil];
     
     [[NSNotificationCenter defaultCenter] addObserver:self
                                              selector:@selector(handleKeyboardWillHideNotification:)
                                                  name:UIKeyboardWillHideNotification
-                                               object:self.view.window];
+                                               object:nil];
 }
 
 - (void)handleKeyboardWillShowNotification:(NSNotification *)sender {
@@ -139,10 +144,6 @@
 
 - (void)handleKeyboardWillHideNotification:(NSNotification *)sender {
     self.scrollViewBottomLayout.constant = 0.0f;
-}
-
-- (void)dealloc {
-    [[NSNotificationCenter defaultCenter] removeObserver:self];
 }
 
 #pragma mark - UIPickerViewDataSource
