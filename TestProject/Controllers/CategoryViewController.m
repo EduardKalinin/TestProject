@@ -13,6 +13,7 @@
 #import "UIAlertController+Utils.h"
 #import "PhotoViewController.h"
 #import "Photo.h"
+#import "CacheManager.h"
 
 @interface CategoryViewController () <UITableViewDataSource, UITableViewDelegate>
 
@@ -27,8 +28,25 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.navigationItem.title = @"Category";
+    [self addBarButtonItem];
     self.categoryService = [[CategoryService alloc] init];
     [self loadData];
+}
+
+#pragma mark - BarButton
+
+- (void)addBarButtonItem {
+    UIBarButtonItem *clearCache = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemTrash
+                                                                                target:self
+                                                                                action:@selector(actionCleanCacheBarButtonClicked:)];
+    
+    self.navigationItem.rightBarButtonItems = @[clearCache];
+}
+
+#pragma mark - Action
+
+- (void)actionCleanCacheBarButtonClicked:(UIBarButtonItem *)sender {
+    [CacheManager removeDirectory];
 }
 
 #pragma mark - UITableViewDataSource

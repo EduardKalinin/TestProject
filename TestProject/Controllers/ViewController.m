@@ -33,7 +33,6 @@ NSString *const twoHundredMb = @"http://download.thinkbroadband.com/200MB.zip";
 @property (weak, nonatomic) IBOutlet UIButton *fiftyMbButton;
 @property (weak, nonatomic) IBOutlet UIButton *hundredMbButton;
 @property (weak, nonatomic) IBOutlet UIActivityIndicatorView *activityIndicator;
-
 @end
 
 @implementation ViewController

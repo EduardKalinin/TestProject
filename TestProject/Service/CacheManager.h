@@ -13,5 +13,6 @@
 + (BOOL)fileExistsWithName:(NSString *)name;
 + (NSData *)getDataWithName:(NSString *)name;
 + (void)saveData:(NSData *)data withName:(NSString *)name;
++ (void)removeDirectory;
 
 @end

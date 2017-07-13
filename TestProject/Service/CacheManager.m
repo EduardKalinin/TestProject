@@ -58,7 +58,11 @@
 }
 
 + (void)removeDirectory {
-    
+    NSError *error;
+    [[NSFileManager defaultManager] removeItemAtPath:[CacheManager getHomeDirectory] error:&error];
+    if (error) {
+        NSLog(@"%@", error.localizedDescription);
+    }
 }
 
 @end

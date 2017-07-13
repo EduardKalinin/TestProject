@@ -11,7 +11,6 @@
 		8B566B951F15354B00AB6A3A /* Category.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B566B941F15354B00AB6A3A /* Category.m */; };
 		8B566B981F15362500AB6A3A /* Photo.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B566B971F15362500AB6A3A /* Photo.m */; };
 		8B566BA21F153BF300AB6A3A /* CategoryService.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B566BA11F153BF300AB6A3A /* CategoryService.m */; };
-		8B566BA51F153C0400AB6A3A /* PhotosService.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B566BA41F153C0400AB6A3A /* PhotosService.m */; };
 		8B566BA81F155DA800AB6A3A /* CustomTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B566BA71F155DA800AB6A3A /* CustomTableViewCell.m */; };
 		8B566BB11F1590C200AB6A3A /* CustomCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B566BB01F1590C200AB6A3A /* CustomCollectionViewCell.m */; };
 		8B566BBC1F16511800AB6A3A /* CategoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B566BB51F16511800AB6A3A /* CategoryViewController.m */; };
@@ -37,8 +36,6 @@
 		8B566B9E1F15380D00AB6A3A /* ModelProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ModelProtocol.h; sourceTree = "<group>"; };
 		8B566BA01F153BF300AB6A3A /* CategoryService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CategoryService.h; sourceTree = "<group>"; };
 		8B566BA11F153BF300AB6A3A /* CategoryService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CategoryService.m; sourceTree = "<group>"; };
-		8B566BA31F153C0400AB6A3A /* PhotosService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhotosService.h; sourceTree = "<group>"; };
-		8B566BA41F153C0400AB6A3A /* PhotosService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhotosService.m; sourceTree = "<group>"; };
 		8B566BA61F155DA800AB6A3A /* CustomTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomTableViewCell.h; sourceTree = "<group>"; };
 		8B566BA71F155DA800AB6A3A /* CustomTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomTableViewCell.m; sourceTree = "<group>"; };
 		8B566BAF1F1590C200AB6A3A /* CustomCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomCollectionViewCell.h; sourceTree = "<group>"; };
@@ -103,8 +100,6 @@
 			children = (
 				8B566BA01F153BF300AB6A3A /* CategoryService.h */,
 				8B566BA11F153BF300AB6A3A /* CategoryService.m */,
-				8B566BA31F153C0400AB6A3A /* PhotosService.h */,
-				8B566BA41F153C0400AB6A3A /* PhotosService.m */,
 				8B566BC01F169C4500AB6A3A /* CacheManager.h */,
 				8B566BC11F169C4500AB6A3A /* CacheManager.m */,
 			);
@@ -275,7 +270,6 @@
 				8B566BA81F155DA800AB6A3A /* CustomTableViewCell.m in Sources */,
 				8B566B8B1F14B55800AB6A3A /* UIAlertController+Utils.m in Sources */,
 				8B566BBC1F16511800AB6A3A /* CategoryViewController.m in Sources */,
-				8B566BA51F153C0400AB6A3A /* PhotosService.m in Sources */,
 				8B566B981F15362500AB6A3A /* Photo.m in Sources */,
 				8B566BBD1F16511800AB6A3A /* ImageViewController.m in Sources */,
 				8B566BBE1F16511800AB6A3A /* PhotoViewController.m in Sources */,
