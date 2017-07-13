@@ -374,6 +374,7 @@
                         <outlet property="nameTextField" destination="qCU-LF-0GX" id="z7i-f1-lkt"/>
                         <outlet property="passwordTextField" destination="nAc-XJ-rle" id="MJY-ex-RYd"/>
                         <outlet property="phoneTextField" destination="IwS-IU-AIv" id="B6D-qf-K1f"/>
+                        <outlet property="scrollViewBottomLayout" destination="0t6-5v-MOZ" id="ylA-qe-GlC"/>
                         <outlet property="sexTextField" destination="aoF-ct-f3R" id="xSU-KR-tEs"/>
                         <outlet property="zipTextField" destination="YLJ-Tg-0er" id="9tU-kk-T1e"/>
                     </connections>

@@ -17,6 +17,7 @@
 @property (weak, nonatomic) IBOutlet UITextField *zipTextField;
 @property (weak, nonatomic) IBOutlet UITextField *emailTextField;
 @property (weak, nonatomic) IBOutlet UITextField *passwordTextField;
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *scrollViewBottomLayout;
 
 @end
 
@@ -25,11 +26,19 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.title = @"Title";
-    [self configureButtonWithPhoneTextField];
-    [self configureButtonWithZipTextField];
+    [self configureLayout];
 }
 
 #pragma mark - Helpers
+
+- (void)configureLayout {
+    [self configureButtonWithPhoneTextField];
+    [self configureButtonWithZipTextField];
+    [self signWithNotification];
+    
+    UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self.view action:@selector(endEditing:)];
+    [self.view addGestureRecognizer:tap];
+}
 
 - (void)configureButtonWithPhoneTextField {
     UIToolbar *keyboardNextButtonView = [[UIToolbar alloc] init];
@@ -98,6 +107,37 @@
         [self.passwordTextField resignFirstResponder];
     }
     return YES;
+}
+
+- (void)signWithNotification {
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(handleKeyboardWillShowNotification:)
+                                                 name:UIKeyboardWillShowNotification
+                                               object:self.view.window];
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(handleKeyboardWillHideNotification:)
+                                                 name:UIKeyboardWillHideNotification
+                                               object:self.view.window];
+}
+
+- (void)handleKeyboardWillShowNotification:(NSNotification *)sender {
+    NSDictionary *userInfo = sender.userInfo;
+    
+    CGFloat duration = [sender.userInfo [UIKeyboardAnimationDurationUserInfoKey] floatValue];
+    CGSize keyboardSize = [userInfo [UIKeyboardFrameBeginUserInfoKey] CGRectValue].size;
+    [UIView animateWithDuration:duration animations:^{
+        self.scrollViewBottomLayout.constant = keyboardSize.height;
+        [self.view layoutIfNeeded];
+    }];
+}
+
+- (void)handleKeyboardWillHideNotification:(NSNotification *)sender {
+    self.scrollViewBottomLayout.constant = 0.0f;
+}
+
+- (void)dealloc {
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
 }
 
 @end
