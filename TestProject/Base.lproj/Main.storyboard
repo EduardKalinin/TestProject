@@ -126,7 +126,7 @@
                                                         </connections>
                                                     </textField>
                                                 </subviews>
-                                                <color key="backgroundColor" red="0.92591744661331177" green="0.91050523519515991" blue="0.86862003803253174" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <color key="backgroundColor" red="0.70151603221893311" green="0.71352189779281616" blue="0.73009306192398071" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <constraints>
                                                     <constraint firstItem="KtB-wS-Nqe" firstAttribute="top" secondItem="JSL-pc-eW2" secondAttribute="top" id="74G-Mt-I8p"/>
                                                     <constraint firstAttribute="trailing" secondItem="qCU-LF-0GX" secondAttribute="trailing" constant="8" id="BIc-VP-8st"/>
@@ -157,7 +157,7 @@
                                                         </connections>
                                                     </textField>
                                                 </subviews>
-                                                <color key="backgroundColor" red="0.92591744659999997" green="0.91050523520000004" blue="0.86862003799999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <color key="backgroundColor" red="0.70151603221893311" green="0.71352189779281616" blue="0.73009306192398071" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <constraints>
                                                     <constraint firstItem="aoF-ct-f3R" firstAttribute="top" secondItem="0nt-MS-iUT" secondAttribute="bottom" constant="8" id="Ctz-Ge-nO1"/>
                                                     <constraint firstAttribute="bottom" secondItem="aoF-ct-f3R" secondAttribute="bottom" constant="8" id="EZN-Wm-oF2"/>
@@ -188,7 +188,7 @@
                                                         </connections>
                                                     </textField>
                                                 </subviews>
-                                                <color key="backgroundColor" red="0.92591744659999997" green="0.91050523520000004" blue="0.86862003799999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <color key="backgroundColor" red="0.70151603221893311" green="0.71352189779281616" blue="0.73009306192398071" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="trailing" secondItem="IwS-IU-AIv" secondAttribute="trailing" constant="8" id="LNy-32-StE"/>
                                                     <constraint firstAttribute="trailing" secondItem="nCe-uG-kUu" secondAttribute="trailing" constant="207" id="YlP-kF-P51"/>
@@ -213,13 +213,13 @@
                                                         <color key="backgroundColor" red="0.79578083749999995" green="0.8040036559" blue="0.80391645430000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <nil key="textColor"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                        <textInputTraits key="textInputTraits" keyboardType="alphabet" returnKeyType="next"/>
+                                                        <textInputTraits key="textInputTraits" autocapitalizationType="words" keyboardType="alphabet" returnKeyType="next"/>
                                                         <connections>
                                                             <outlet property="delegate" destination="X9M-VO-IFs" id="OAc-1l-NeW"/>
                                                         </connections>
                                                     </textField>
                                                 </subviews>
-                                                <color key="backgroundColor" red="0.92591744659999997" green="0.91050523520000004" blue="0.86862003799999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <color key="backgroundColor" red="0.70151603221893311" green="0.71352189779281616" blue="0.73009306192398071" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="trailing" secondItem="4sL-fp-HSb" secondAttribute="trailing" constant="207" id="NVA-kZ-w5w"/>
                                                     <constraint firstItem="jEJ-mP-nEv" firstAttribute="top" secondItem="4sL-fp-HSb" secondAttribute="bottom" constant="8" id="Scd-CX-oXP"/>
@@ -250,7 +250,7 @@
                                                         </connections>
                                                     </textField>
                                                 </subviews>
-                                                <color key="backgroundColor" red="0.92591744659999997" green="0.91050523520000004" blue="0.86862003799999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <color key="backgroundColor" red="0.70151603221893311" green="0.71352189779281616" blue="0.73009306192398071" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="trailing" secondItem="YLJ-Tg-0er" secondAttribute="trailing" constant="8" id="AwH-9G-3LJ"/>
                                                     <constraint firstItem="YLJ-Tg-0er" firstAttribute="leading" secondItem="L8G-NX-Gl8" secondAttribute="leading" constant="8" id="FxA-iS-ORh"/>
@@ -281,7 +281,7 @@
                                                         </connections>
                                                     </textField>
                                                 </subviews>
-                                                <color key="backgroundColor" red="0.92591744659999997" green="0.91050523520000004" blue="0.86862003799999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <color key="backgroundColor" red="0.70151603221893311" green="0.71352189779281616" blue="0.73009306192398071" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="trailing" secondItem="Df2-qH-alZ" secondAttribute="trailing" constant="8" id="NaF-73-CXq"/>
                                                     <constraint firstItem="ddR-Wp-Bh5" firstAttribute="leading" secondItem="ppw-tK-Jxq" secondAttribute="leading" constant="8" id="RU6-vc-eUO"/>
@@ -312,7 +312,7 @@
                                                         </connections>
                                                     </textField>
                                                 </subviews>
-                                                <color key="backgroundColor" red="0.92591744659999997" green="0.91050523520000004" blue="0.86862003799999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <color key="backgroundColor" red="0.70151603221893311" green="0.71352189779281616" blue="0.73009306192398071" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <constraints>
                                                     <constraint firstItem="nAc-XJ-rle" firstAttribute="leading" secondItem="VXB-Lr-tLg" secondAttribute="leading" constant="8" id="0ao-tK-vhT"/>
                                                     <constraint firstAttribute="bottom" secondItem="nAc-XJ-rle" secondAttribute="bottom" constant="8" id="Bku-CN-QQs"/>
@@ -324,7 +324,6 @@
                                                 </constraints>
                                             </view>
                                         </subviews>
-                                        <color key="backgroundColor" red="0.92554813623428345" green="0.911256261532435" blue="0.86797375922189379" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstItem="JSL-pc-eW2" firstAttribute="leading" secondItem="BYj-ix-wvO" secondAttribute="leading" constant="20" id="3S5-t5-xzb"/>
                                             <constraint firstAttribute="trailing" secondItem="DUU-Mi-U7o" secondAttribute="trailing" constant="20" id="4wB-yr-mKA"/>
@@ -360,7 +359,7 @@
                                 </constraints>
                             </scrollView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="lCu-nm-bmE" firstAttribute="top" secondItem="6g6-ZD-cuo" secondAttribute="bottom" id="0t6-5v-MOZ"/>
                             <constraint firstAttribute="trailing" secondItem="6g6-ZD-cuo" secondAttribute="trailing" id="Byl-0E-SsO"/>
