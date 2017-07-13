@@ -120,7 +120,7 @@
                                                         <color key="backgroundColor" red="0.79578083753585815" green="0.80400365591049194" blue="0.80391645431518555" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <nil key="textColor"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                        <textInputTraits key="textInputTraits" keyboardType="alphabet" returnKeyType="next"/>
+                                                        <textInputTraits key="textInputTraits" autocapitalizationType="words" keyboardType="alphabet" returnKeyType="next"/>
                                                         <connections>
                                                             <outlet property="delegate" destination="X9M-VO-IFs" id="Zi8-qs-7PW"/>
                                                         </connections>
@@ -182,7 +182,7 @@
                                                         <color key="backgroundColor" red="0.79578083749999995" green="0.8040036559" blue="0.80391645430000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <nil key="textColor"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                        <textInputTraits key="textInputTraits" keyboardType="numberPad" returnKeyType="next"/>
+                                                        <textInputTraits key="textInputTraits" keyboardType="phonePad" returnKeyType="next"/>
                                                         <connections>
                                                             <outlet property="delegate" destination="X9M-VO-IFs" id="IHA-By-X1V"/>
                                                         </connections>
