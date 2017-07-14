@@ -27,6 +27,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
     [self configureLayout];
 }
 
@@ -54,7 +55,7 @@
     
     if ([self.viewArray containsObject:touch.view]) {
         self.draggingView = touch.view;
-        self.draggingView.center = [self convertView:self.draggingView withTouch:touch];
+        self.draggingView.center = [touch locationInView:self.view.window];
         
         [UIView animateWithDuration:0.3 animations:^{
             self.draggingView.transform = CGAffineTransformMakeScale(1.1, 1.1);
@@ -69,7 +70,7 @@
 - (void)touchesMoved:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
     if (self.draggingView) {
         UITouch *touch = [touches anyObject];
-        self.draggingView.center = [self convertView:self.draggingView withTouch:touch];
+        self.draggingView.center = [touch locationInView:self.view.window];
     }
 }
 
@@ -81,15 +82,10 @@
     [self touchEnded:touches];
 }
 
-- (CGPoint)convertView:(UIView *)view withTouch:(UITouch *)touch {
-    CGPoint location = [touch locationInView:touch.view];
-    return [view convertPoint:location toView:self.view.window];
-}
-
 - (void)touchEnded:(NSSet<UITouch *> *)touches {
     if (self.draggingView) {
         UITouch *touch = [touches anyObject];
-        CGPoint point = [self convertView:self.draggingView withTouch:touch];
+        CGPoint point = [touch locationInView:self.view.window];
         UIView *conteiner;
         
         if (CGRectContainsPoint(self.topConteinerView.frame, point)) {
