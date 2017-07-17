@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8B538FC01F1A1330009D298F /* AnimationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B538FBF1F1A1330009D298F /* AnimationViewController.m */; };
+		8B538FC31F1BFF65009D298F /* AnimationV2ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B538FC21F1BFF65009D298F /* AnimationV2ViewController.m */; };
 		8B566B8B1F14B55800AB6A3A /* UIAlertController+Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B566B8A1F14B55800AB6A3A /* UIAlertController+Utils.m */; };
 		8B566B951F15354B00AB6A3A /* Category.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B566B941F15354B00AB6A3A /* Category.m */; };
 		8B566B981F15362500AB6A3A /* Photo.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B566B971F15362500AB6A3A /* Photo.m */; };
@@ -30,6 +32,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		8B538FBE1F1A1330009D298F /* AnimationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AnimationViewController.h; sourceTree = "<group>"; };
+		8B538FBF1F1A1330009D298F /* AnimationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AnimationViewController.m; sourceTree = "<group>"; };
+		8B538FC11F1BFF65009D298F /* AnimationV2ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AnimationV2ViewController.h; sourceTree = "<group>"; };
+		8B538FC21F1BFF65009D298F /* AnimationV2ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AnimationV2ViewController.m; sourceTree = "<group>"; };
 		8B566B891F14B55800AB6A3A /* UIAlertController+Utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIAlertController+Utils.h"; sourceTree = "<group>"; };
 		8B566B8A1F14B55800AB6A3A /* UIAlertController+Utils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIAlertController+Utils.m"; sourceTree = "<group>"; };
 		8B566B931F15354B00AB6A3A /* Category.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Category.h; sourceTree = "<group>"; };
@@ -132,6 +138,10 @@
 				8B566BCA1F18AAAB00AB6A3A /* NewUserInfoTableViewController.m */,
 				8B566BCC1F18F2A000AB6A3A /* TouchViewController.h */,
 				8B566BCD1F18F2A000AB6A3A /* TouchViewController.m */,
+				8B538FBE1F1A1330009D298F /* AnimationViewController.h */,
+				8B538FBF1F1A1330009D298F /* AnimationViewController.m */,
+				8B538FC11F1BFF65009D298F /* AnimationV2ViewController.h */,
+				8B538FC21F1BFF65009D298F /* AnimationV2ViewController.m */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -283,11 +293,13 @@
 				8B566BC21F169C4500AB6A3A /* CacheManager.m in Sources */,
 				8B566BA21F153BF300AB6A3A /* CategoryService.m in Sources */,
 				8B566BA81F155DA800AB6A3A /* CustomTableViewCell.m in Sources */,
+				8B538FC31F1BFF65009D298F /* AnimationV2ViewController.m in Sources */,
 				8B566B8B1F14B55800AB6A3A /* UIAlertController+Utils.m in Sources */,
 				8B566BC51F17A1B600AB6A3A /* UserInfoViewController.m in Sources */,
 				8B566BBC1F16511800AB6A3A /* CategoryViewController.m in Sources */,
 				8B566B981F15362500AB6A3A /* Photo.m in Sources */,
 				8B566BCE1F18F2A000AB6A3A /* TouchViewController.m in Sources */,
+				8B538FC01F1A1330009D298F /* AnimationViewController.m in Sources */,
 				8B566BBD1F16511800AB6A3A /* ImageViewController.m in Sources */,
 				8B566BBE1F16511800AB6A3A /* PhotoViewController.m in Sources */,
 				8B566B951F15354B00AB6A3A /* Category.m in Sources */,
