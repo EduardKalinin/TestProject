@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="bgE-1h-36Y">
+            <objects>
+                <viewController storyboardIdentifier="navVC" id="tp2-Pf-AO9" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="6xd-8X-Hc2"/>
+                        <viewControllerLayoutGuide type="bottom" id="CAf-Xb-f2o"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8v0-5f-nET">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dyb-k4-bbA">
+                                <rect key="frame" x="0.0" y="150" width="375" height="30"/>
+                                <state key="normal" title="first Screen"/>
+                                <connections>
+                                    <segue destination="znK-jn-8gr" kind="push" id="Egt-ZS-Vgp"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="idF-XL-jmC">
+                                <rect key="frame" x="0.0" y="250" width="375" height="30"/>
+                                <state key="normal" title="second Screen"/>
+                                <connections>
+                                    <segue destination="CwU-qe-raS" kind="modal" id="10B-Ng-q3J"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Dyb-k4-bbA" firstAttribute="top" secondItem="6xd-8X-Hc2" secondAttribute="bottom" constant="130" id="9I3-aE-PxW"/>
+                            <constraint firstItem="Dyb-k4-bbA" firstAttribute="leading" secondItem="8v0-5f-nET" secondAttribute="leading" id="9ow-A9-kms"/>
+                            <constraint firstItem="idF-XL-jmC" firstAttribute="leading" secondItem="8v0-5f-nET" secondAttribute="leading" id="MWV-5d-amE"/>
+                            <constraint firstAttribute="trailing" secondItem="idF-XL-jmC" secondAttribute="trailing" id="Y4b-EE-fol"/>
+                            <constraint firstAttribute="trailing" secondItem="Dyb-k4-bbA" secondAttribute="trailing" id="n9y-vP-3Dh"/>
+                            <constraint firstItem="idF-XL-jmC" firstAttribute="top" secondItem="Dyb-k4-bbA" secondAttribute="bottom" constant="70" id="r0x-qJ-Tyi"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0tc-zF-yb2" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="236" y="310"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="DJq-UF-YFp">
+            <objects>
+                <viewController id="znK-jn-8gr" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="rC7-7B-U9A"/>
+                        <viewControllerLayoutGuide type="bottom" id="fHJ-gH-WU4"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="XAW-68-XPi">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="vb6-8K-zZF"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tSh-ez-DnL" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1126" y="-128"/>
+        </scene>
+        <!--New Second View Controller-->
+        <scene sceneID="uTf-VY-nkC">
+            <objects>
+                <viewController storyboardIdentifier="NewSecondViewController" id="QXR-lI-IEO" customClass="NewSecondViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="mRC-kH-9AU"/>
+                        <viewControllerLayoutGuide type="bottom" id="2me-FJ-kva"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="MUv-ww-qCH">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="ajk-LU-PsS">
+                        <barButtonItem key="rightBarButtonItem" systemItem="cancel" id="R3W-rh-ybo">
+                            <connections>
+                                <action selector="cancelBarButtonAction:" destination="QXR-lI-IEO" id="evu-UY-w0X"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zMq-cC-HcQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2064.8000000000002" y="610.34482758620697"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Omu-0m-yjc">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="CwU-qe-raS" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="tFp-nx-dH9">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="QXR-lI-IEO" kind="relationship" relationship="rootViewController" id="PQ5-fn-1R6"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6QJ-wI-d3v" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1125.5999999999999" y="610.34482758620697"/>
+        </scene>
+    </scenes>
+</document>
