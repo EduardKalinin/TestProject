@@ -8,6 +8,7 @@
 
 #import "NavigationTableViewController.h"
 #import "NavigationInCodeRootViewController.h"
+#import "RootTabBatViewController.h"
 
 @interface NavigationTableViewController ()
 
@@ -25,6 +26,11 @@
 - (IBAction)actionGoButton:(UIButton *)sender {
     UIViewController *firstController = [[NavigationInCodeRootViewController alloc] init];
     [self.navigationController pushViewController:firstController animated:YES];
+}
+
+- (IBAction)actionGoTabButton:(UIButton *)sender {
+    UITabBarController *firstBarController = [[RootTabBatViewController alloc] init];
+    [self.navigationController pushViewController:firstBarController animated:YES];
 }
 
 @end
