@@ -34,13 +34,22 @@
                                     <segue destination="CwU-qe-raS" kind="modal" id="10B-Ng-q3J"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="alfhsaklghlaiughalshlasjvnasjknv;aurvlaibva;fnvfslknvls;kanva'ksnv;asfjnv" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AM6-lh-geI">
+                                <rect key="frame" x="0.0" y="323" width="375" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="AM6-lh-geI" firstAttribute="top" secondItem="idF-XL-jmC" secondAttribute="bottom" constant="43" id="6d3-Vr-Iu0"/>
                             <constraint firstItem="Dyb-k4-bbA" firstAttribute="top" secondItem="6xd-8X-Hc2" secondAttribute="bottom" constant="130" id="9I3-aE-PxW"/>
                             <constraint firstItem="Dyb-k4-bbA" firstAttribute="leading" secondItem="8v0-5f-nET" secondAttribute="leading" id="9ow-A9-kms"/>
                             <constraint firstItem="idF-XL-jmC" firstAttribute="leading" secondItem="8v0-5f-nET" secondAttribute="leading" id="MWV-5d-amE"/>
                             <constraint firstAttribute="trailing" secondItem="idF-XL-jmC" secondAttribute="trailing" id="Y4b-EE-fol"/>
+                            <constraint firstAttribute="trailing" secondItem="AM6-lh-geI" secondAttribute="trailing" id="ZXP-F4-POy"/>
+                            <constraint firstItem="AM6-lh-geI" firstAttribute="leading" secondItem="8v0-5f-nET" secondAttribute="leading" id="ZqA-sh-XIZ"/>
                             <constraint firstAttribute="trailing" secondItem="Dyb-k4-bbA" secondAttribute="trailing" id="n9y-vP-3Dh"/>
                             <constraint firstItem="idF-XL-jmC" firstAttribute="top" secondItem="Dyb-k4-bbA" secondAttribute="bottom" constant="70" id="r0x-qJ-Tyi"/>
                         </constraints>
@@ -72,7 +81,7 @@
         <!--New Second View Controller-->
         <scene sceneID="uTf-VY-nkC">
             <objects>
-                <viewController storyboardIdentifier="NewSecondViewController" id="QXR-lI-IEO" customClass="NewSecondViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="NewSecondViewController" extendedLayoutIncludesOpaqueBars="YES" modalTransitionStyle="flipHorizontal" id="QXR-lI-IEO" customClass="NewSecondViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="mRC-kH-9AU"/>
                         <viewControllerLayoutGuide type="bottom" id="2me-FJ-kva"/>
@@ -80,7 +89,19 @@
                     <view key="view" contentMode="scaleToFill" id="MUv-ww-qCH">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fsE-Ka-hwi">
+                                <rect key="frame" x="30" y="94" width="315" height="543"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.15215118838028169" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="fsE-Ka-hwi" secondAttribute="trailing" constant="30" id="SmY-l9-Lr6"/>
+                            <constraint firstItem="2me-FJ-kva" firstAttribute="top" secondItem="fsE-Ka-hwi" secondAttribute="bottom" constant="30" id="VHL-nI-X1S"/>
+                            <constraint firstItem="fsE-Ka-hwi" firstAttribute="top" secondItem="mRC-kH-9AU" secondAttribute="bottom" constant="30" id="ZFl-cy-ILf"/>
+                            <constraint firstItem="fsE-Ka-hwi" firstAttribute="leading" secondItem="MUv-ww-qCH" secondAttribute="leading" constant="30" id="kFi-to-sLA"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="ajk-LU-PsS">
                         <barButtonItem key="rightBarButtonItem" systemItem="cancel" id="R3W-rh-ybo">
@@ -92,12 +113,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zMq-cC-HcQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2064.8000000000002" y="610.34482758620697"/>
+            <point key="canvasLocation" x="2065" y="694"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Omu-0m-yjc">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="CwU-qe-raS" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" modalTransitionStyle="flipHorizontal" modalPresentationStyle="overCurrentContext" id="CwU-qe-raS" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="tFp-nx-dH9">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
@@ -110,7 +131,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6QJ-wI-d3v" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1125.5999999999999" y="610.34482758620697"/>
+            <point key="canvasLocation" x="1126" y="694"/>
         </scene>
     </scenes>
 </document>

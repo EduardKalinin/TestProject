@@ -581,7 +581,7 @@
         <!--Root View Controller-->
         <scene sceneID="N2a-mR-Pz6">
             <objects>
-                <tableViewController id="jSl-rz-rTu" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="NavigationTableViewController" id="jSl-rz-rTu" customClass="NavigationTableViewController" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" id="BNY-Jh-ihG">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -750,8 +750,38 @@
                                             <segue destination="CbV-fA-Jmk" kind="show" id="mIa-fv-K2s"/>
                                         </connections>
                                     </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" rowHeight="60" id="aJm-qB-ybV">
+                                        <rect key="frame" x="0.0" y="476" width="375" height="60"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="aJm-qB-ybV" id="zo3-8V-92s">
+                                            <rect key="frame" x="0.0" y="0.0" width="342" height="60"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="test navigation" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZPe-az-LVL">
+                                                    <rect key="frame" x="12" y="20" width="113" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pJp-b8-AQW">
+                                                    <rect key="frame" x="0.0" y="0.0" width="342" height="60"/>
+                                                    <connections>
+                                                        <action selector="actionGoButton:" destination="jSl-rz-rTu" eventType="touchUpInside" id="Jay-vm-dGE"/>
+                                                    </connections>
+                                                </button>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="pJp-b8-AQW" firstAttribute="leading" secondItem="zo3-8V-92s" secondAttribute="leading" id="8C2-R4-8e4"/>
+                                                <constraint firstAttribute="trailing" secondItem="pJp-b8-AQW" secondAttribute="trailing" id="CNs-Av-lqF"/>
+                                                <constraint firstItem="ZPe-az-LVL" firstAttribute="leading" secondItem="zo3-8V-92s" secondAttribute="leading" constant="12" id="Cuv-pE-ydX"/>
+                                                <constraint firstItem="ZPe-az-LVL" firstAttribute="centerY" secondItem="zo3-8V-92s" secondAttribute="centerY" id="Jev-GF-ucZ"/>
+                                                <constraint firstItem="pJp-b8-AQW" firstAttribute="top" secondItem="zo3-8V-92s" secondAttribute="top" id="KHT-Ou-NrZ"/>
+                                                <constraint firstAttribute="bottom" secondItem="pJp-b8-AQW" secondAttribute="bottom" id="MF1-aT-4mD"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" rowHeight="60" id="E4H-ri-jph">
-                                        <rect key="frame" x="0.0" y="475.5" width="375" height="60"/>
+                                        <rect key="frame" x="0.0" y="535.5" width="375" height="60"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="E4H-ri-jph" id="aww-zT-T2j">
                                             <rect key="frame" x="0.0" y="0.0" width="342" height="59.5"/>
@@ -774,7 +804,7 @@
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" rowHeight="60" id="1a5-Qp-ivl">
-                                        <rect key="frame" x="0.0" y="535.5" width="375" height="60"/>
+                                        <rect key="frame" x="0.0" y="595.5" width="375" height="60"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="1a5-Qp-ivl" id="wqq-OC-uwJ">
                                             <rect key="frame" x="0.0" y="0.0" width="342" height="59.5"/>
@@ -808,7 +838,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uSA-Bd-8MI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1903" y="60"/>
+            <point key="canvasLocation" x="-1903.2" y="59.820089955022496"/>
         </scene>
         <!--navVC-->
         <scene sceneID="rao-bd-LF7">
