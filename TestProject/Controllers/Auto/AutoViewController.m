@@ -11,12 +11,12 @@
 #import "CustomAutoTableViewCell.h"
 
 typedef NS_ENUM(NSUInteger, SortCriteria) {
-    BrandAZ = (1 << 0),
-    BrandZA = (1 << 1),
-    ModelAZ = (1 << 3),
-    ModelZA = (1 << 4),
-    YearInAscendingOrder = (1 << 5),
-    YearInDescendingOrder = (1 << 6)
+    BrandAZ,
+    BrandZA,
+    ModelAZ,
+    ModelZA,
+    YearInAscendingOrder,
+    YearInDescendingOrder
 };
 
 @interface AutoViewController () <UITableViewDataSource, UITableViewDelegate, UISearchBarDelegate, UIPickerViewDataSource, UIPickerViewDelegate>
