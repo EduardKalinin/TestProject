@@ -28,11 +28,14 @@
 		8B6A73CF1F1E2C0A007F2589 /* NavigationTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B6A73BE1F1E2C0A007F2589 /* NavigationTableViewController.m */; };
 		8B6A73D01F1E2C0A007F2589 /* TouchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B6A73C11F1E2C0A007F2589 /* TouchViewController.m */; };
 		8B6A73D11F1E2C0A007F2589 /* UserInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B6A73C41F1E2C0A007F2589 /* UserInfoViewController.m */; };
+		8B8AF76F1F1EB11B00F5B351 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8BD22CDE1F137C7500DD96AE /* Main.storyboard */; };
+		8B8AF7701F1EB12100F5B351 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8BD22CE31F137C7500DD96AE /* LaunchScreen.storyboard */; };
+		8B8AF7751F1EB2B800F5B351 /* AutoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BBAB58E1F1E8C6A00C4B354 /* AutoViewController.m */; };
+		8B8AF7761F1EB2B800F5B351 /* Model.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BBAB5911F1E8DC000C4B354 /* Model.m */; };
+		8B8AF7771F1EB2B800F5B351 /* CustomAutoTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BBAB5941F1EA52600C4B354 /* CustomAutoTableViewCell.m */; };
 		8BBAB5881F1E382500C4B354 /* RootTabBatViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BBAB5871F1E382500C4B354 /* RootTabBatViewController.m */; };
 		8BD22CD71F137C7500DD96AE /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BD22CD61F137C7500DD96AE /* main.m */; };
-		8BD22CE01F137C7500DD96AE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8BD22CDE1F137C7500DD96AE /* Main.storyboard */; };
 		8BD22CE21F137C7500DD96AE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8BD22CE11F137C7500DD96AE /* Assets.xcassets */; };
-		8BD22CE51F137C7500DD96AE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8BD22CE31F137C7500DD96AE /* LaunchScreen.storyboard */; };
 		8BD22CF41F138C4F00DD96AE /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BD22CF31F138C4F00DD96AE /* AppDelegate.m */; };
 		8BD22CF71F138C7600DD96AE /* TransportLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BD22CF61F138C7600DD96AE /* TransportLayer.m */; };
 /* End PBXBuildFile section */
@@ -82,6 +85,12 @@
 		8B6A73C41F1E2C0A007F2589 /* UserInfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserInfoViewController.m; sourceTree = "<group>"; };
 		8BBAB5861F1E382500C4B354 /* RootTabBatViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RootTabBatViewController.h; sourceTree = "<group>"; };
 		8BBAB5871F1E382500C4B354 /* RootTabBatViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootTabBatViewController.m; sourceTree = "<group>"; };
+		8BBAB58D1F1E8C6A00C4B354 /* AutoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AutoViewController.h; sourceTree = "<group>"; };
+		8BBAB58E1F1E8C6A00C4B354 /* AutoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AutoViewController.m; sourceTree = "<group>"; };
+		8BBAB5901F1E8DC000C4B354 /* Model.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Model.h; sourceTree = "<group>"; };
+		8BBAB5911F1E8DC000C4B354 /* Model.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Model.m; sourceTree = "<group>"; };
+		8BBAB5931F1EA52600C4B354 /* CustomAutoTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomAutoTableViewCell.h; sourceTree = "<group>"; };
+		8BBAB5941F1EA52600C4B354 /* CustomAutoTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomAutoTableViewCell.m; sourceTree = "<group>"; };
 		8BD22CD21F137C7500DD96AE /* TestProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TestProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8BD22CD61F137C7500DD96AE /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		8BD22CDF1F137C7500DD96AE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -152,6 +161,7 @@
 				8B6A73BF1F1E2C0A007F2589 /* Touch */,
 				8B6A73C21F1E2C0A007F2589 /* User Info */,
 				8BBAB5851F1E359700C4B354 /* Tab Bar */,
+				8BBAB5891F1E8B7700C4B354 /* Auto */,
 			);
 			name = Controllers;
 			path = TestProject/Controllers;
@@ -260,6 +270,19 @@
 				8BBAB5871F1E382500C4B354 /* RootTabBatViewController.m */,
 			);
 			path = "Tab Bar";
+			sourceTree = "<group>";
+		};
+		8BBAB5891F1E8B7700C4B354 /* Auto */ = {
+			isa = PBXGroup;
+			children = (
+				8BBAB58D1F1E8C6A00C4B354 /* AutoViewController.h */,
+				8BBAB58E1F1E8C6A00C4B354 /* AutoViewController.m */,
+				8BBAB5901F1E8DC000C4B354 /* Model.h */,
+				8BBAB5911F1E8DC000C4B354 /* Model.m */,
+				8BBAB5931F1EA52600C4B354 /* CustomAutoTableViewCell.h */,
+				8BBAB5941F1EA52600C4B354 /* CustomAutoTableViewCell.m */,
+			);
+			path = Auto;
 			sourceTree = "<group>";
 		};
 		8BD22CC91F137C7400DD96AE = {
@@ -393,10 +416,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8B8AF7701F1EB12100F5B351 /* LaunchScreen.storyboard in Resources */,
+				8B8AF76F1F1EB11B00F5B351 /* Main.storyboard in Resources */,
 				8B538FCB1F1CBA17009D298F /* Navigation.storyboard in Resources */,
-				8BD22CE51F137C7500DD96AE /* LaunchScreen.storyboard in Resources */,
 				8BD22CE21F137C7500DD96AE /* Assets.xcassets in Resources */,
-				8BD22CE01F137C7500DD96AE /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -407,6 +430,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8B8AF7751F1EB2B800F5B351 /* AutoViewController.m in Sources */,
+				8B8AF7761F1EB2B800F5B351 /* Model.m in Sources */,
+				8B8AF7771F1EB2B800F5B351 /* CustomAutoTableViewCell.m in Sources */,
 				8B6A73CF1F1E2C0A007F2589 /* NavigationTableViewController.m in Sources */,
 				8B566BC21F169C4500AB6A3A /* CacheManager.m in Sources */,
 				8B6A73D01F1E2C0A007F2589 /* TouchViewController.m in Sources */,

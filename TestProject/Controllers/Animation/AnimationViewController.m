@@ -121,26 +121,20 @@
 }
 
 - (void)createSquareLoading {
-    UIView *view = [[UIView alloc] initWithFrame:CGRectMake(CGRectGetMidX(self.secondContainerView.bounds) - 70.0, CGRectGetMidY(self.secondContainerView.bounds) - 25.0, 50.0, 50.0)];
+    UIView *view = [[UIView alloc] initWithFrame:CGRectMake(CGRectGetMidX(self.secondContainerView.bounds) - 70.0,
+                                                            CGRectGetMidY(self.secondContainerView.bounds) - 25.0,
+                                                            50.0, 50.0)];
     
     view.backgroundColor = [UIColor grayColor];
     
     CABasicAnimation *rotate = [CABasicAnimation animationWithKeyPath:@"transform.rotation.z"];
     rotate.fromValue = @(0.0);
     rotate.toValue = @(M_PI * 2);
-    //    rotate.repeatCount = CGFLOAT_MAX;
-    //    rotate.duration = 3.0;
-    //    rotate.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionLinear];
-    //    [view.layer addAnimation:rotate forKey:nil];
     
     CABasicAnimation *rotateX = [CABasicAnimation animationWithKeyPath:@"transform.rotation.x"];
     rotateX.fromValue = @(0.0);
     rotateX.toValue = @(M_PI * 2);
-    //    rotateX.repeatCount = CGFLOAT_MAX;
-    //    rotateX.duration = 3.0;
-    //    rotateX.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionLinear];
-    //    [view.layer addAnimation:rotateX forKey:nil];
-    
+  
     CAAnimationGroup *group = [CAAnimationGroup animation];
     group.animations = @[rotate, rotateX];
     group.repeatCount = CGFLOAT_MAX;
