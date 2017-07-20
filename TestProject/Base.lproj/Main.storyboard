@@ -1149,6 +1149,29 @@
                                             <segue destination="Yn6-Mz-nyt" kind="show" id="Jke-0f-U9I"/>
                                         </connections>
                                     </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" rowHeight="60" id="dC3-XL-fMa">
+                                        <rect key="frame" x="0.0" y="835.5" width="375" height="60"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="dC3-XL-fMa" id="gUz-c9-fXk">
+                                            <rect key="frame" x="0.0" y="0.0" width="342" height="59.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Web" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZnF-aZ-YAH">
+                                                    <rect key="frame" x="12" y="19.5" width="35" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="ZnF-aZ-YAH" firstAttribute="centerY" secondItem="gUz-c9-fXk" secondAttribute="centerY" id="Vgm-eQ-v6m"/>
+                                                <constraint firstItem="ZnF-aZ-YAH" firstAttribute="leading" secondItem="gUz-c9-fXk" secondAttribute="leading" constant="12" id="z6C-k1-9pY"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="l2L-na-Hnf" kind="show" id="jSg-xy-9hh"/>
+                                        </connections>
+                                    </tableViewCell>
                                 </cells>
                             </tableViewSection>
                         </sections>
@@ -1186,6 +1209,83 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Xli-sO-fHZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-5310" y="-163"/>
+        </scene>
+        <!--Web View Controller-->
+        <scene sceneID="9w1-N9-Ynh">
+            <objects>
+                <viewController storyboardIdentifier="WebViewController" id="l2L-na-Hnf" customClass="WebViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="mhv-98-PWx"/>
+                        <viewControllerLayoutGuide type="bottom" id="Uv1-dz-2nP"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="a23-vO-wHq">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jQq-6e-Ztb">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <connections>
+                                    <outlet property="delegate" destination="l2L-na-Hnf" id="fOI-ih-S1K"/>
+                                </connections>
+                            </webView>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" hidesWhenStopped="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="qXA-bc-7uZ">
+                                <rect key="frame" x="170" y="316" width="37" height="37"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="color" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            </activityIndicatorView>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="l8M-Tk-fgC">
+                                <rect key="frame" x="0.0" y="623" width="375" height="44"/>
+                                <items>
+                                    <barButtonItem systemItem="rewind" id="z19-yq-EUf">
+                                        <connections>
+                                            <action selector="actionBackButton:" destination="l2L-na-Hnf" id="bE7-Ja-aXv"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="wAT-gy-WcS"/>
+                                    <barButtonItem systemItem="fastForward" id="yxh-Ox-LgD">
+                                        <connections>
+                                            <action selector="actionForwardButton:" destination="l2L-na-Hnf" id="jjq-1A-mHQ"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="ro0-Tq-9fM"/>
+                                    <barButtonItem id="dY2-9C-WKZ">
+                                        <connections>
+                                            <action selector="actionRefreshButton:" destination="l2L-na-Hnf" id="GFN-ap-lhR"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="0U5-Ae-LUE"/>
+                                    <barButtonItem systemItem="action" id="ObT-6D-83c">
+                                        <connections>
+                                            <action selector="actionActionButton:" destination="l2L-na-Hnf" id="wtp-i3-LOH"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="jQq-6e-Ztb" secondAttribute="trailing" id="5vc-As-1kB"/>
+                            <constraint firstItem="Uv1-dz-2nP" firstAttribute="top" secondItem="l8M-Tk-fgC" secondAttribute="bottom" id="GtR-5H-HiC"/>
+                            <constraint firstItem="jQq-6e-Ztb" firstAttribute="top" secondItem="a23-vO-wHq" secondAttribute="top" id="SCJ-lF-r4T"/>
+                            <constraint firstAttribute="trailing" secondItem="l8M-Tk-fgC" secondAttribute="trailing" id="cwL-Lq-OH1"/>
+                            <constraint firstItem="Uv1-dz-2nP" firstAttribute="top" secondItem="jQq-6e-Ztb" secondAttribute="bottom" id="d9e-4V-La4"/>
+                            <constraint firstItem="jQq-6e-Ztb" firstAttribute="leading" secondItem="a23-vO-wHq" secondAttribute="leading" id="j14-W6-xnT"/>
+                            <constraint firstItem="l8M-Tk-fgC" firstAttribute="leading" secondItem="a23-vO-wHq" secondAttribute="leading" id="j4b-TI-8Yr"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="actionButtonItem" destination="ObT-6D-83c" id="OM0-Xs-1ln"/>
+                        <outlet property="activityIndicator" destination="qXA-bc-7uZ" id="liZ-F1-2LA"/>
+                        <outlet property="backButtonItem" destination="z19-yq-EUf" id="umg-1g-7WS"/>
+                        <outlet property="forwardButtonItem" destination="yxh-Ox-LgD" id="cjH-kJ-EvJ"/>
+                        <outlet property="refreshButtonItem" destination="dY2-9C-WKZ" id="tbv-D4-OdF"/>
+                        <outlet property="webView" destination="jQq-6e-Ztb" id="jCP-CV-f1d"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Jfv-co-hHY" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-5335" y="763"/>
         </scene>
         <!--AnimationV2 View Controller-->
         <scene sceneID="rk6-xY-IV5">
