@@ -24,33 +24,47 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    [self configureURLRequest];
+}
+
+#pragma mark - Helpers
+
+- (void)configureURLRequest {
     NSURL *url = [NSURL URLWithString:@"http://apple.com"];
     NSURLRequest *request = [NSURLRequest requestWithURL:url];
     [self.webView loadRequest:request];
-    
 }
 
-#pragma mark - Actions
+#pragma mark - IBActions
 
-- (IBAction)actionBackButton:(UIBarButtonItem *)sender {
-    if ([self.webView canGoBack]) {
+- (IBAction)actionBackButtonClicked:(UIBarButtonItem *)sender {
+    if (self.webView.canGoBack) {
         [self.webView goBack];
     }
 }
 
-- (IBAction)actionForwardButton:(UIBarButtonItem *)sender {
-    if ([self.webView canGoForward]) {
+- (IBAction)actionForwardButtonClicked:(UIBarButtonItem *)sender {
+    if (self.webView.canGoForward) {
         [self.webView stopLoading];
         [self.webView goForward];
     }
 }
 
-- (IBAction)actionRefreshButton:(UIBarButtonItem *)sender {
+- (IBAction)actionRefreshButtonClicked:(UIBarButtonItem *)sender {
     [self.webView reload];
 }
 
-- (IBAction)actionActionButton:(UIBarButtonItem *)sender {
+- (IBAction)actionActionButtonClicked:(UIBarButtonItem *)sender {
     
+}
+
+- (void)webViewFinishLoad {
+    [self.activityIndicator stopAnimating];
+    
+    self.refreshButtonItem.title = @"refresh";
+    
+    self.backButtonItem.enabled = self.webView.canGoBack;
+    self.forwardButtonItem.enabled = self.webView.canGoForward;
 }
 
 #pragma mark - UIWebViewDelegate
@@ -63,20 +77,15 @@
 - (void)webViewDidStartLoad:(UIWebView *)webView {
     [self.activityIndicator startAnimating];
     
-    [self.refreshButtonItem setTitle:@"Stop"];
+    self.refreshButtonItem.title = @"Stop";
 }
 
 - (void)webViewDidFinishLoad:(UIWebView *)webView {
-    [self.activityIndicator stopAnimating];
-    
-    [self.refreshButtonItem setTitle:@"refresh"];
-
-    self.backButtonItem.enabled = [self.webView canGoBack];
-    self.forwardButtonItem.enabled = [self.webView canGoForward];
+    [self webViewFinishLoad];
 }
 
 - (void)webView:(UIWebView *)webView didFailLoadWithError:(NSError *)error {
-    
+    [self webViewFinishLoad];
 }
 
 @end

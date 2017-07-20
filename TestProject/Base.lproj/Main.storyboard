@@ -1239,25 +1239,25 @@
                                 <items>
                                     <barButtonItem systemItem="rewind" id="z19-yq-EUf">
                                         <connections>
-                                            <action selector="actionBackButton:" destination="l2L-na-Hnf" id="bE7-Ja-aXv"/>
+                                            <action selector="actionBackButtonClicked:" destination="l2L-na-Hnf" id="xzk-hJ-lMU"/>
                                         </connections>
                                     </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="wAT-gy-WcS"/>
                                     <barButtonItem systemItem="fastForward" id="yxh-Ox-LgD">
                                         <connections>
-                                            <action selector="actionForwardButton:" destination="l2L-na-Hnf" id="jjq-1A-mHQ"/>
+                                            <action selector="actionForwardButtonClicked:" destination="l2L-na-Hnf" id="uG7-FS-DJa"/>
                                         </connections>
                                     </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="ro0-Tq-9fM"/>
                                     <barButtonItem id="dY2-9C-WKZ">
                                         <connections>
-                                            <action selector="actionRefreshButton:" destination="l2L-na-Hnf" id="GFN-ap-lhR"/>
+                                            <action selector="actionRefreshButtonClicked:" destination="l2L-na-Hnf" id="7YQ-YY-RXG"/>
                                         </connections>
                                     </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="0U5-Ae-LUE"/>
                                     <barButtonItem systemItem="action" id="ObT-6D-83c">
                                         <connections>
-                                            <action selector="actionActionButton:" destination="l2L-na-Hnf" id="wtp-i3-LOH"/>
+                                            <action selector="actionActionButtonClicked:" destination="l2L-na-Hnf" id="Dd7-4Q-GId"/>
                                         </connections>
                                     </barButtonItem>
                                 </items>
