@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8B25A9D61F21F8F60057F121 /* Node.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B25A9D51F21F8F60057F121 /* Node.m */; };
+		8B25A9D91F2204260057F121 /* LinkedList.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B25A9D81F2204260057F121 /* LinkedList.m */; };
+		8B25A9DD1F2E7B6E0057F121 /* NewDownloadViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B25A9DC1F2E7B6E0057F121 /* NewDownloadViewController.m */; };
+		8B25A9E01F2E80310057F121 /* NewTransportLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B25A9DF1F2E80310057F121 /* NewTransportLayer.m */; };
 		8B2AB63C1F2009CE00ED994C /* WebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B2AB63B1F2009CE00ED994C /* WebViewController.m */; };
 		8B538FCB1F1CBA17009D298F /* Navigation.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8B538FCA1F1CBA17009D298F /* Navigation.storyboard */; };
 		8B566B8B1F14B55800AB6A3A /* UIAlertController+Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B566B8A1F14B55800AB6A3A /* UIAlertController+Utils.m */; };
@@ -42,6 +46,14 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		8B25A9D41F21F8F60057F121 /* Node.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Node.h; sourceTree = "<group>"; };
+		8B25A9D51F21F8F60057F121 /* Node.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Node.m; sourceTree = "<group>"; };
+		8B25A9D71F2204260057F121 /* LinkedList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LinkedList.h; sourceTree = "<group>"; };
+		8B25A9D81F2204260057F121 /* LinkedList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LinkedList.m; sourceTree = "<group>"; };
+		8B25A9DB1F2E7B6E0057F121 /* NewDownloadViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewDownloadViewController.h; sourceTree = "<group>"; };
+		8B25A9DC1F2E7B6E0057F121 /* NewDownloadViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewDownloadViewController.m; sourceTree = "<group>"; };
+		8B25A9DE1F2E80310057F121 /* NewTransportLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewTransportLayer.h; sourceTree = "<group>"; };
+		8B25A9DF1F2E80310057F121 /* NewTransportLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewTransportLayer.m; sourceTree = "<group>"; };
 		8B2AB63A1F2009CE00ED994C /* WebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebViewController.h; sourceTree = "<group>"; };
 		8B2AB63B1F2009CE00ED994C /* WebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebViewController.m; sourceTree = "<group>"; };
 		8B538FCA1F1CBA17009D298F /* Navigation.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Navigation.storyboard; sourceTree = "<group>"; };
@@ -117,6 +129,26 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8B25A9D01F2168B40057F121 /* Data structures */ = {
+			isa = PBXGroup;
+			children = (
+				8B25A9D41F21F8F60057F121 /* Node.h */,
+				8B25A9D51F21F8F60057F121 /* Node.m */,
+				8B25A9D71F2204260057F121 /* LinkedList.h */,
+				8B25A9D81F2204260057F121 /* LinkedList.m */,
+			);
+			path = "Data structures";
+			sourceTree = "<group>";
+		};
+		8B25A9DA1F2E7B230057F121 /* New download */ = {
+			isa = PBXGroup;
+			children = (
+				8B25A9DB1F2E7B6E0057F121 /* NewDownloadViewController.h */,
+				8B25A9DC1F2E7B6E0057F121 /* NewDownloadViewController.m */,
+			);
+			path = "New download";
+			sourceTree = "<group>";
+		};
 		8B2AB6391F2009B000ED994C /* Web */ = {
 			isa = PBXGroup;
 			children = (
@@ -162,6 +194,7 @@
 		8B6A73A01F1E2C0A007F2589 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				8B25A9D01F2168B40057F121 /* Data structures */,
 				8B6A73A11F1E2C0A007F2589 /* Animation */,
 				8B6A73A61F1E2C0A007F2589 /* Image */,
 				8B6A73AB1F1E2C0A007F2589 /* Load File */,
@@ -175,6 +208,7 @@
 				8BBAB5851F1E359700C4B354 /* Tab Bar */,
 				8BBAB5891F1E8B7700C4B354 /* Auto */,
 				8B2AB6391F2009B000ED994C /* Web */,
+				8B25A9DA1F2E7B230057F121 /* New download */,
 			);
 			name = Controllers;
 			path = TestProject/Controllers;
@@ -347,6 +381,8 @@
 			children = (
 				8BD22CF51F138C7600DD96AE /* TransportLayer.h */,
 				8BD22CF61F138C7600DD96AE /* TransportLayer.m */,
+				8B25A9DE1F2E80310057F121 /* NewTransportLayer.h */,
+				8B25A9DF1F2E80310057F121 /* NewTransportLayer.m */,
 			);
 			name = Transport;
 			sourceTree = "<group>";
@@ -445,7 +481,9 @@
 			files = (
 				8B8AF7751F1EB2B800F5B351 /* AutoViewController.m in Sources */,
 				8B8AF7761F1EB2B800F5B351 /* Model.m in Sources */,
+				8B25A9E01F2E80310057F121 /* NewTransportLayer.m in Sources */,
 				8B8AF7771F1EB2B800F5B351 /* CustomAutoTableViewCell.m in Sources */,
+				8B25A9D61F21F8F60057F121 /* Node.m in Sources */,
 				8B6A73CF1F1E2C0A007F2589 /* NavigationTableViewController.m in Sources */,
 				8B566BC21F169C4500AB6A3A /* CacheManager.m in Sources */,
 				8B6A73D01F1E2C0A007F2589 /* TouchViewController.m in Sources */,
@@ -460,6 +498,8 @@
 				8B6A73CE1F1E2C0A007F2589 /* PhotoViewController.m in Sources */,
 				8B2AB63C1F2009CE00ED994C /* WebViewController.m in Sources */,
 				8B6A73CD1F1E2C0A007F2589 /* NewUserInfoTableViewController.m in Sources */,
+				8B25A9D91F2204260057F121 /* LinkedList.m in Sources */,
+				8B25A9DD1F2E7B6E0057F121 /* NewDownloadViewController.m in Sources */,
 				8BD22CF71F138C7600DD96AE /* TransportLayer.m in Sources */,
 				8BBAB5881F1E382500C4B354 /* RootTabBatViewController.m in Sources */,
 				8B566BB11F1590C200AB6A3A /* CustomCollectionViewCell.m in Sources */,

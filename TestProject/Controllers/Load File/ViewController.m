@@ -40,8 +40,6 @@ NSString *const twoHundredMb = @"http://download.thinkbroadband.com/200MB.zip";
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    // Hello #1
-    
     self.transport = [[TransportLayer alloc] init];
     
 }
