@@ -717,6 +717,50 @@
             </objects>
             <point key="canvasLocation" x="2069.5999999999999" y="59.820089955022496"/>
         </scene>
+        <!--New Download View Controller-->
+        <scene sceneID="w5w-KC-BhE">
+            <objects>
+                <viewController storyboardIdentifier="NewDownloadViewController" id="LzW-dE-dxL" customClass="NewDownloadViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="gF7-NT-2xx"/>
+                        <viewControllerLayoutGuide type="bottom" id="IAD-lP-juJ"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8fv-Av-kfw">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HiV-oa-1rF">
+                                <rect key="frame" x="26" y="115" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Start"/>
+                                <connections>
+                                    <action selector="actionStartButtonClicked:" destination="LzW-dE-dxL" eventType="touchUpInside" id="KNE-8J-thk"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3D9-CC-6Cs">
+                                <rect key="frame" x="297" y="115" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <action selector="actionStopButtonClicked:" destination="LzW-dE-dxL" eventType="touchUpInside" id="5N6-dD-R05"/>
+                                </connections>
+                            </button>
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Gjy-yY-w0V">
+                                <rect key="frame" x="112" y="129" width="150" height="2"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </progressView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <outlet property="progressView" destination="Gjy-yY-w0V" id="lUb-ko-Vm3"/>
+                        <outlet property="startButton" destination="HiV-oa-1rF" id="KQ3-WA-GI5"/>
+                        <outlet property="stopButton" destination="3D9-CC-6Cs" id="Afi-4R-Uo6"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="m3y-Cm-kzU" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-5000" y="-1002"/>
+        </scene>
         <!--Auto View Controller-->
         <scene sceneID="oJK-uW-zbi">
             <objects>
@@ -1170,6 +1214,29 @@
                                         </tableViewCellContentView>
                                         <connections>
                                             <segue destination="l2L-na-Hnf" kind="show" id="jSg-xy-9hh"/>
+                                        </connections>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" rowHeight="60" id="Kxw-tK-PCa">
+                                        <rect key="frame" x="0.0" y="895.5" width="375" height="60"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Kxw-tK-PCa" id="GEH-wm-LoW">
+                                            <rect key="frame" x="0.0" y="0.0" width="342" height="59.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="New download" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fDp-y9-4VG">
+                                                    <rect key="frame" x="12" y="19.5" width="113" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="fDp-y9-4VG" firstAttribute="leading" secondItem="GEH-wm-LoW" secondAttribute="leading" constant="12" id="CiL-9Y-axO"/>
+                                                <constraint firstItem="fDp-y9-4VG" firstAttribute="centerY" secondItem="GEH-wm-LoW" secondAttribute="centerY" id="N2W-Ht-VzH"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="LzW-dE-dxL" kind="show" id="L1n-Sk-TyG"/>
                                         </connections>
                                     </tableViewCell>
                                 </cells>

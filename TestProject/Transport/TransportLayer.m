@@ -8,7 +8,7 @@
 
 #import "TransportLayer.h"
 
-@interface TransportLayer ()
+@interface TransportLayer()
 
 @property (strong, nonatomic) NSURLSession *session;
 
