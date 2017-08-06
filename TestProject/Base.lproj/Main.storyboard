@@ -729,29 +729,61 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HiV-oa-1rF">
-                                <rect key="frame" x="26" y="115" width="46" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Start"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HiV-oa-1rF" customClass="TransparentButton">
+                                <rect key="frame" x="20" y="94" width="40" height="34"/>
+                                <state key="normal" title="Start">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <state key="selected">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
                                 <connections>
                                     <action selector="actionStartButtonClicked:" destination="LzW-dE-dxL" eventType="touchUpInside" id="KNE-8J-thk"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3D9-CC-6Cs">
-                                <rect key="frame" x="297" y="115" width="46" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3D9-CC-6Cs" customClass="TransparentButton">
+                                <rect key="frame" x="317" y="94" width="38" height="34"/>
+                                <state key="normal" title="Stop">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <state key="selected">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
                                 <connections>
                                     <action selector="actionStopButtonClicked:" destination="LzW-dE-dxL" eventType="touchUpInside" id="5N6-dD-R05"/>
                                 </connections>
                             </button>
-                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Gjy-yY-w0V">
-                                <rect key="frame" x="112" y="129" width="150" height="2"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Gjy-yY-w0V">
+                                <rect key="frame" x="100" y="110" width="175" height="2"/>
                             </progressView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hqJ-Cm-lAD" customClass="TransparentButton">
+                                <rect key="frame" x="26" y="139" width="317" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Pause">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <state key="selected" title="Resume">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="actionPauseButtonClicked:" destination="LzW-dE-dxL" eventType="touchUpInside" id="N67-uF-lcy"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="HiV-oa-1rF" firstAttribute="leading" secondItem="8fv-Av-kfw" secondAttribute="leading" constant="20" id="5P9-PS-lUo"/>
+                            <constraint firstItem="Gjy-yY-w0V" firstAttribute="centerY" secondItem="HiV-oa-1rF" secondAttribute="centerY" id="CiU-j3-yd2"/>
+                            <constraint firstAttribute="trailing" secondItem="Gjy-yY-w0V" secondAttribute="trailing" constant="100" id="W6v-VC-y4c"/>
+                            <constraint firstItem="HiV-oa-1rF" firstAttribute="top" secondItem="gF7-NT-2xx" secondAttribute="bottom" constant="30" id="as5-S1-9XI"/>
+                            <constraint firstItem="Gjy-yY-w0V" firstAttribute="leading" secondItem="8fv-Av-kfw" secondAttribute="leading" constant="100" id="kIj-AG-CPJ"/>
+                            <constraint firstAttribute="trailing" secondItem="3D9-CC-6Cs" secondAttribute="trailing" constant="20" id="mdz-9j-Lrx"/>
+                            <constraint firstItem="3D9-CC-6Cs" firstAttribute="centerY" secondItem="HiV-oa-1rF" secondAttribute="centerY" id="nHI-AT-24W"/>
+                            <constraint firstItem="3D9-CC-6Cs" firstAttribute="top" secondItem="gF7-NT-2xx" secondAttribute="bottom" constant="30" id="uek-Dj-QOi"/>
+                        </constraints>
                     </view>
                     <connections>
+                        <outlet property="pauseButton" destination="hqJ-Cm-lAD" id="Jsd-5Z-sko"/>
                         <outlet property="progressView" destination="Gjy-yY-w0V" id="lUb-ko-Vm3"/>
                         <outlet property="startButton" destination="HiV-oa-1rF" id="KQ3-WA-GI5"/>
                         <outlet property="stopButton" destination="3D9-CC-6Cs" id="Afi-4R-Uo6"/>
@@ -759,7 +791,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="m3y-Cm-kzU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-5000" y="-1002"/>
+            <point key="canvasLocation" x="-5000.8000000000002" y="-1002.5487256371815"/>
         </scene>
         <!--Auto View Controller-->
         <scene sceneID="oJK-uW-zbi">
