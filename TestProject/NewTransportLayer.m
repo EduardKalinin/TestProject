@@ -7,10 +7,12 @@
 //
 
 #import "NewTransportLayer.h"
+#import <UIKit/UIKit.h>
 
 @interface NewTransportLayer() <NSURLSessionDelegate>
 
 @property (strong, nonatomic) NSURLSession *session;
+@property (strong, nonatomic) NSURLSessionDownloadTask *downloadTask;
 
 @property (copy, nonatomic) void (^success)(void);
 @property (copy, nonatomic) void (^failure)(NSError *error);
@@ -34,15 +36,38 @@
     self.success = success;
     self.failure = failure;
     self.progress = progress;
-    [[self.session downloadTaskWithURL:url] resume];
+    
+    self.downloadTask = [self.session downloadTaskWithURL:url];
+    [self.downloadTask resume];
+}
+
+- (void)suspendDownload {
+    if (self.downloadTask.state == NSURLSessionTaskStateRunning) {
+        [self.downloadTask suspend];
+    }
+}
+
+- (void)resumeDownload {
+    if (self.downloadTask.state == NSURLSessionTaskStateSuspended) {
+        [self.downloadTask resume];
+    }
+}
+
+- (void)cancelDownload {
+    if (self.downloadTask.state == NSURLSessionTaskStateRunning) {
+        [self.downloadTask cancel];
+    }
 }
 
 #pragma mark - NSURLSessionDelegate
 
 - (void)URLSession:(NSURLSession *)session task:(NSURLSessionTask *)task didCompleteWithError:(nullable NSError *)error {
-    if (self.failure) {
-        self.failure(error);
-    }
+    __weak NewTransportLayer *weakself = self;
+    dispatch_async(dispatch_get_main_queue(), ^{
+        if (weakself.failure && error && error.code != NSURLErrorCancelled) {
+            weakself.failure(error);
+        }
+    });
 }
 
 - (void)URLSession:(NSURLSession *)session dataTask:(NSURLSessionDataTask *)dataTask
@@ -52,18 +77,26 @@ didBecomeDownloadTask:(NSURLSessionDownloadTask *)downloadTask {
 
 - (void)URLSession:(NSURLSession *)session downloadTask:(NSURLSessionDownloadTask *)downloadTask
 didFinishDownloadingToURL:(NSURL *)location {
-    if (self.success) {
-        self.success();
-    }
+    
+    __weak NewTransportLayer *weakself = self;
+    dispatch_async(dispatch_get_main_queue(), ^{
+        if (weakself.success) {
+            weakself.success();
+        }
+    });
 }
 
 - (void)URLSession:(NSURLSession *)session downloadTask:(NSURLSessionDownloadTask *)downloadTask
       didWriteData:(int64_t)bytesWritten
  totalBytesWritten:(int64_t)totalBytesWritten
 totalBytesExpectedToWrite:(int64_t)totalBytesExpectedToWrite {
-    if (self.progress) {
-        self.progress(totalBytesWritten / totalBytesExpectedToWrite);
-    }
+    
+    __weak NewTransportLayer *weakself = self;
+    dispatch_async(dispatch_get_main_queue(), ^{
+        if (weakself.progress && downloadTask.state != NSURLSessionTaskStateCanceling) {
+            weakself.progress((CGFloat)totalBytesWritten / (CGFloat)totalBytesExpectedToWrite);
+        }
+    });
 }
 
 @end

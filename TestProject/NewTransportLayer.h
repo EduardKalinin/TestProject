@@ -12,5 +12,8 @@
 @interface NewTransportLayer : NSObject
 
 - (void)downloadFileWithURL:(NSURL *)url success:(void(^)())success failure:(void(^)(NSError *error))failure progress:(void(^)(CGFloat))progress;
+- (void)suspendDownload;
+- (void)resumeDownload;
+- (void)cancelDownload;
 
 @end

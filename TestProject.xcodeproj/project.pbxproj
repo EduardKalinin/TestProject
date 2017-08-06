@@ -11,6 +11,7 @@
 		8B25A9D91F2204260057F121 /* LinkedList.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B25A9D81F2204260057F121 /* LinkedList.m */; };
 		8B25A9DD1F2E7B6E0057F121 /* NewDownloadViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B25A9DC1F2E7B6E0057F121 /* NewDownloadViewController.m */; };
 		8B25A9E01F2E80310057F121 /* NewTransportLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B25A9DF1F2E80310057F121 /* NewTransportLayer.m */; };
+		8B25A9E31F37373B0057F121 /* TransparentButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B25A9E21F37373B0057F121 /* TransparentButton.m */; };
 		8B2AB63C1F2009CE00ED994C /* WebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B2AB63B1F2009CE00ED994C /* WebViewController.m */; };
 		8B538FCB1F1CBA17009D298F /* Navigation.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8B538FCA1F1CBA17009D298F /* Navigation.storyboard */; };
 		8B566B8B1F14B55800AB6A3A /* UIAlertController+Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B566B8A1F14B55800AB6A3A /* UIAlertController+Utils.m */; };
@@ -54,6 +55,8 @@
 		8B25A9DC1F2E7B6E0057F121 /* NewDownloadViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewDownloadViewController.m; sourceTree = "<group>"; };
 		8B25A9DE1F2E80310057F121 /* NewTransportLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewTransportLayer.h; sourceTree = "<group>"; };
 		8B25A9DF1F2E80310057F121 /* NewTransportLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewTransportLayer.m; sourceTree = "<group>"; };
+		8B25A9E11F37373B0057F121 /* TransparentButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TransparentButton.h; sourceTree = "<group>"; };
+		8B25A9E21F37373B0057F121 /* TransparentButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TransparentButton.m; sourceTree = "<group>"; };
 		8B2AB63A1F2009CE00ED994C /* WebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebViewController.h; sourceTree = "<group>"; };
 		8B2AB63B1F2009CE00ED994C /* WebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebViewController.m; sourceTree = "<group>"; };
 		8B538FCA1F1CBA17009D298F /* Navigation.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Navigation.storyboard; sourceTree = "<group>"; };
@@ -394,6 +397,8 @@
 				8B566BA71F155DA800AB6A3A /* CustomTableViewCell.m */,
 				8B566BAF1F1590C200AB6A3A /* CustomCollectionViewCell.h */,
 				8B566BB01F1590C200AB6A3A /* CustomCollectionViewCell.m */,
+				8B25A9E11F37373B0057F121 /* TransparentButton.h */,
+				8B25A9E21F37373B0057F121 /* TransparentButton.m */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -502,6 +507,7 @@
 				8B25A9DD1F2E7B6E0057F121 /* NewDownloadViewController.m in Sources */,
 				8BD22CF71F138C7600DD96AE /* TransportLayer.m in Sources */,
 				8BBAB5881F1E382500C4B354 /* RootTabBatViewController.m in Sources */,
+				8B25A9E31F37373B0057F121 /* TransparentButton.m in Sources */,
 				8B566BB11F1590C200AB6A3A /* CustomCollectionViewCell.m in Sources */,
 				8B6A73C91F1E2C0A007F2589 /* ViewController.m in Sources */,
 				8B6A73C71F1E2C0A007F2589 /* CategoryViewController.m in Sources */,
